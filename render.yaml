@@ -1,0 +1,39 @@
+﻿services:
+
+  - type: web
+
+    name: abantu-intelligence-api
+
+    runtime: python
+
+    buildCommand: "./build.sh"
+
+    startCommand: "gunicorn config.wsgi:application"
+
+    envVars:
+
+      - key: SECRET_KEY
+        generateValue: true
+
+      - key: DEBUG
+        value: "False"
+
+      - key: ALLOWED_HOSTS
+        sync: false
+
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+
+      - key: DATABASE_URL
+        fromDatabase:
+          name: abantu-intelligence-db
+          property: connectionString
+
+
+databases:
+
+  - name: abantu-intelligence-db
+
+    databaseName: abantu_intelligence
+
+    user: abantu_intelligence
