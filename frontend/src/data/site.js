@@ -235,7 +235,7 @@ export const projects = [
   strategic:
     "Demonstrates how fragmented property information can be transformed into a structured digital rental experience with potential to evolve into a broader property marketplace and management platform.",
 },
-
+/*
   {
     title: "Municipal Utility Intelligence",
     slug: "municipal-utility-intelligence",
@@ -289,7 +289,7 @@ export const projects = [
     strategic:
       "Demonstrates reusable product-data infrastructure for complex commerce catalogues.",
   },
-
+*/
   {
   title: "ScrapYard Software",
   slug: "scrapyard-software",

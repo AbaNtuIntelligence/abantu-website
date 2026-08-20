@@ -29,7 +29,8 @@ export default function Article() {
             {article.takeaway && <><h2>The takeaway</h2><p>{article.takeaway}</p></>}
             <div className="article-cms-note">
               <strong>A.I. in practice</strong>
-              <p>When the Django publishing API is connected, this page will render the full article authored and published through the administrative CMS. The local catalogue currently provides the same real-world editorial structure so the experience is complete before the publishing layer is connected.</p>
+              {/*              <p>When the Django publishing API is connected, this page will render the full article authored and published through the administrative CMS. The local catalogue currently provides the same real-world editorial structure so the experience is complete before the publishing layer is connected.</p>
+*/}
             </div>
           </div>
         )}
