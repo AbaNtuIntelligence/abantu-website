@@ -1,119 +1,125 @@
 export const site = {
   name: "AbaNtu Intelligence",
-  descriptor: "Digital systems for people, institutions and opportunity.",
+  descriptor: "A.I. rooted in people. Digital intelligence built for real-world impact.",
+  positioning: "AbaNtu Intelligence is where human intelligence meets artificial intelligence to create practical digital systems.",
   email: "thabelephangalele@outlook.com",
   phone: "+27 73 086 2149",
   location: "Johannesburg, South Africa",
 };
 
+export const aiPhilosophy = {
+  label: "The AbaNtu Intelligence philosophy",
+  title: "Before Artificial Intelligence, there is AbaNtu Intelligence.",
+  lead:
+    "Technology is powerful because people give it purpose. We build digital systems that amplify human intelligence, institutional knowledge and collective capability.",
+  statement:
+    "A.I. is not only what machines can do. It is what people can accomplish when intelligence, technology and purpose are brought together.",
+  flow: [
+    ["01", "People", "Start with lived experience, human needs and institutional context."],
+    ["02", "Problems", "Understand the operational challenge before selecting the technology."],
+    ["03", "Intelligence", "Turn knowledge, information and insight into something structured and usable."],
+    ["04", "Systems", "Build digital products that make people and organisations more capable."],
+    ["05", "Impact", "Measure success by what becomes possible after the system exists."],
+  ],
+};
+
 export const insights = [
   {
-    title:
-      "Beyond Websites: Building Digital Infrastructure for African Organisations",
+    title: "Before Artificial Intelligence, There Is AbaNtu Intelligence",
+    slug: "before-artificial-intelligence-there-is-abantu-intelligence",
+    category: "AbaNtu Intelligence",
+    excerpt: "Artificial intelligence is transforming how we work, learn and build. But technology only becomes meaningful when it is grounded in human intelligence, context and purpose.",
+    scenario: "A school may have teachers with decades of institutional knowledge, an SMME may know exactly how its customers behave, and a community may understand its own challenges better than any outside consultant. Yet much of that intelligence remains informal, scattered or trapped in people's heads.",
+    problem: "When human knowledge is disconnected from digital systems, technology can become an expensive layer on top of an unchanged problem. AI can accelerate the wrong workflow just as efficiently as the right one.",
+    perspective: "AbaNtu Intelligence begins with the intelligence that already exists. We use digital systems, automation, data and AI to structure, amplify and extend that intelligence rather than obscure it.",
+    takeaway: "The future is not human intelligence versus artificial intelligence. It is human intelligence amplified by technology with purpose.",
+  },
+  {
+    title: "Beyond Websites: Building Digital Infrastructure for African Organisations",
     slug: "beyond-websites-digital-infrastructure",
     category: "Digital Transformation",
-    excerpt:
-      "A website is often only the visible layer. Sustainable transformation requires data, workflows, people and systems underneath it.",
+    excerpt: "A website is often the visible layer. Sustainable transformation requires data, workflows, people and intelligence underneath it.",
+    scenario: "A growing organisation may have a website, a WhatsApp number and social-media accounts, yet staff still manage enquiries through spreadsheets, documents are scattered across devices and important processes depend on one person remembering what to do.",
+    problem: "The organisation has a digital presence, but not necessarily digital infrastructure. Information remains fragmented, operational processes remain manual and institutional knowledge can disappear when the person responsible for it leaves.",
+    perspective: "Digital transformation should begin with the operational problem rather than with technology. A website can become the public-facing layer while databases, APIs, dashboards, automation and intelligent workflows operate underneath it.",
+    takeaway: "Start with one meaningful operational problem, build an appropriate system around it and allow the digital infrastructure to evolve with the organisation.",
   },
   {
     title: "What Should a Digital Public School Actually Be?",
     slug: "what-should-a-digital-public-school-be",
     category: "Education Technology",
-    excerpt:
-      "Digital education infrastructure should connect learners, teachers, parents, institutions and knowledge—not simply reproduce a classroom online.",
+    excerpt: "A digital school should connect learners, teachers, parents, institutional knowledge and community—not simply reproduce a classroom online.",
+    scenario: "Imagine a school where parents still depend on handwritten notices, WhatsApp messages and word-of-mouth communication to find out what is happening. Important information can disappear in busy group chats, while prospective parents may struggle to find even basic information about the institution.",
+    problem: "A school can be physically active and educationally valuable while remaining almost invisible digitally. The absence of reliable digital infrastructure affects communication, discoverability, institutional identity and access to information.",
+    perspective: "A digital school can become a persistent institutional information layer connecting the school with parents, learners, educators and the surrounding community, while creating a foundation for deeper education technology.",
+    takeaway: "Digitalising a school should begin with communication and information needs, then grow toward deeper educational and administrative systems.",
   },
   {
     title: "Why SMME Digitalisation Needs More Than a Brochure Website",
     slug: "smme-digitalisation-needs-more-than-a-website",
     category: "SMMEs",
-    excerpt:
-      "For a growing business, catalogue data, enquiries, quotations, operations and discoverability can matter as much as the homepage.",
+    excerpt: "For a growing business, catalogue data, enquiries, quotations, operations and discoverability can matter as much as the homepage.",
+    scenario: "An SMME may have hundreds of products but manage them through spreadsheets, PDFs, WhatsApp messages and manually updated documents. Customers ask for prices or specifications repeatedly because there is no single structured source of product information.",
+    problem: "The website may look professional, but the underlying business information remains fragmented. Every catalogue update becomes manual work and every customer enquiry can require the same information to be reconstructed.",
+    perspective: "The first step toward digital commerce is often structured information rather than online checkout. Once products, categories, specifications, images and enquiries are structured, intelligent search, automation and more sophisticated commerce workflows become possible.",
+    takeaway: "A useful digital system should reduce operational friction, not simply make a business look modern.",
   },
   {
     title: "Designing Technology for Real Infrastructure Constraints",
     slug: "technology-for-real-infrastructure-constraints",
     category: "African Technology",
-    excerpt:
-      "Good digital architecture accounts for bandwidth, device access, maintenance capacity, cost and the operational environment.",
+    excerpt: "Good digital architecture accounts for bandwidth, device access, maintenance capacity, cost and the operational environment.",
+    scenario: "A platform may work beautifully on a modern laptop connected to fast fibre, but its actual users may access it through older smartphones, mobile data and inconsistent connectivity.",
+    problem: "Technology designed without its operating environment in mind can exclude precisely the people it was intended to serve.",
+    perspective: "African digital products need to consider device capability, connectivity, bandwidth, maintenance, affordability and the technical capacity of the organisation operating the system. Intelligence includes knowing what not to build.",
+    takeaway: "The best technology is not necessarily the most technically sophisticated. It is technology that works reliably where people actually use it.",
   },
 ];
 
 export const values = [
-  [
-    "Problem first",
-    "We start with the operational problem, not with a fashionable technology.",
-  ],
-  [
-    "Appropriate technology",
-    "The best architecture is the one an organisation can actually afford, operate and sustain.",
-  ],
-  [
-    "Human-centred systems",
-    "Users, administrators and communities are part of the design process.",
-  ],
-  [
-    "Build for growth",
-    "We favour modular systems that can evolve instead of disposable prototypes.",
-  ],
-  [
-    "Knowledge transfer",
-    "Documentation, training and maintainability are part of responsible delivery.",
-  ],
+  ["Human intelligence first", "We begin with people, their knowledge and their context. Technology follows purpose."],
+  ["AI with purpose", "Artificial intelligence should amplify human capability, improve decisions and reduce friction—not become a buzzword."],
+  ["Problem before platform", "We understand the operational challenge before selecting the architecture, interface or automation."],
+  ["Intelligence into systems", "We turn fragmented information and tacit knowledge into usable digital infrastructure."],
+  ["Build for evolution", "We favour maintainable, modular systems that can grow as the organisation, users and opportunity grow."],
 ];
 
 export const services = [
   {
-    title: "Websites & Digital Presence",
-    text: "Fast, responsive institutional and business websites designed around real users, clear information and measurable outcomes.",
+    title: "AI Strategy & Intelligent Systems",
+    text: "Identify where data, automation and artificial intelligence can meaningfully improve decisions, workflows, customer experiences and institutional capability.",
   },
   {
-    title: "Web Applications",
-    text: "Custom platforms for workflows, marketplaces, profiles, applications, records and organisation-specific processes.",
+    title: "Websites & Digital Identity",
+    text: "Build prestigious digital homes for organisations, schools, businesses and individuals that communicate identity, credibility and opportunity.",
   },
   {
-    title: "Digital Commerce",
-    text: "Product catalogues, quotation workflows, commerce interfaces and structured product information for growing businesses.",
+    title: "Web Applications & Platforms",
+    text: "Design and engineer custom systems for workflows, marketplaces, profiles, applications, records, communities and organisation-specific processes.",
   },
   {
-    title: "Education Technology",
-    text: "Digital platforms and information systems that support schools, educators, parents, learners and education institutions.",
+    title: "Digital Commerce & Product Intelligence",
+    text: "Structure products, specifications, catalogues, quotations and commerce workflows so business information becomes searchable, reusable and scalable.",
   },
   {
-    title: "Civic & Public Systems",
-    text: "Citizen-facing and internal systems designed to make public information and services easier to access and manage.",
+    title: "Education & Institutional Technology",
+    text: "Create digital infrastructure for schools and education organisations that improves communication, access to information, institutional memory and participation.",
   },
   {
-    title: "Digital Transformation",
-    text: "A practical path from fragmented manual processes to maintainable digital systems, with capacity building included.",
+    title: "Civic & Community Systems",
+    text: "Build citizen-facing and community-facing systems that make complex information, services and opportunities easier to access and understand.",
   },
 ];
 
 export const sectors = [
-  {
-    title: "Government",
-    text: "Citizen services, information systems, digital workflows and public-sector modernisation.",
-  },
-  {
-    title: "Education",
-    text: "Schools, education organisations, teachers, parents and learners need digital infrastructure built for their context.",
-  },
-  {
-    title: "SMMEs",
-    text: "Affordable digital commerce, websites, business systems and operational tools that can grow with the organisation.",
-  },
-  {
-    title: "Community Organisations",
-    text: "Digital tools for churches, nonprofits and community initiatives that need reliable information and engagement systems.",
-  },
-  {
-    title: "Institutions",
-    text: "Purpose-built platforms for organisations with specialised workflows, data and stakeholder requirements.",
-  },
-  {
-    title: "Strategic Partners",
-    text: "Technology, development and investment partners looking for practical African digital infrastructure opportunities.",
-  },
+  { title: "Government & Civic Systems", text: "Citizen information, public-service workflows, data systems and digital modernisation built around real institutional constraints." },
+  { title: "Education", text: "Digital infrastructure for schools, teachers, parents, learners, alumni and education organisations." },
+  { title: "SMMEs & Enterprise", text: "Digital identity, commerce, operational systems and intelligent workflows that help organisations become more capable." },
+  { title: "People & Professional Identity", text: "Digital portfolios, resumes and personal platforms that turn skills, experience and achievements into a living digital presence." },
+  { title: "Communities & Institutions", text: "Purpose-built platforms for churches, nonprofits, community initiatives and institutions with specialised stakeholder needs." },
+  { title: "Strategic Partners", text: "Technology, development and investment relationships focused on practical African digital infrastructure and scalable products." },
 ];
+
 export const projects = [
   {
     title: "UmsebenziWethu Digital Job Market",
@@ -251,7 +257,7 @@ export const projects = [
       "React",
       "PostgreSQL",
     ],
-    image: "/projects/municipal-utility.png",
+    image: "/public/logo.png",
     liveUrl: "#",
     strategic:
       "Illustrates how citizen-facing digital systems can make complex public information more usable.",
@@ -278,7 +284,7 @@ export const projects = [
       "PostgreSQL",
       "React",
     ],
-    image: "/projects/techchoice-sa.png",
+    image: "/public/logo.png",
     liveUrl: "#",
     strategic:
       "Demonstrates reusable product-data infrastructure for complex commerce catalogues.",

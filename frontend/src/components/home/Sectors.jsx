@@ -4,9 +4,9 @@ import { sectors } from "../../data/site";
 
 export default function Sectors() {
   return (
-    <section className="section section-muted">
+    <section className="section">
       <div className="container">
-        <SectionHeading eyebrow="Where we work" title="Digital infrastructure across sectors." text="Our work sits where technology meets institutional, commercial and community needs." />
+        <SectionHeading eyebrow="Where intelligence meets reality" title="One philosophy. Many environments." text="The problems change by sector. Our approach remains the same: understand context, structure intelligence and build technology that creates capability." />
         <div className="sector-grid">
           {sectors.map((sector, index) => (
             <div className="sector-card" key={sector.title}>

@@ -4,9 +4,9 @@ import { insights } from "../../data/site";
 
 export default function Insights() {
   return (
-    <section className="section">
+    <section className="section section-muted">
       <div className="container">
-        <SectionHeading eyebrow="AbaNtu Intelligence Insights" title="We build in public through ideas." text="Perspectives on African digital transformation, education technology, SMME digitalisation and civic systems." />
+        <SectionHeading eyebrow="Intelligence in public" title="Ideas for a more intelligent digital future." text="We document what we learn about people, technology, institutions, AI and digital transformation in the real world." />
         <div className="insight-grid">
           {insights.slice(0, 3).map((item) => (
             <article className="insight-card" key={item.slug}>

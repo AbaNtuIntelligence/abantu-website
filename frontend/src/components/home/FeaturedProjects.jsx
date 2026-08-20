@@ -7,11 +7,11 @@ export default function FeaturedProjects() {
   return (
     <section className="section">
       <div className="container">
-        <SectionHeading eyebrow="Selected work" title="We build platforms, not just pages." text="Our recent work spans employment, education, commerce, civic technology and property systems." />
+        <SectionHeading eyebrow="Intelligence in practice" title="We build what the problem requires." text="From employment and education to commerce, civic systems, personal development and business software, our portfolio shows that digital capability is not limited to one type of website." />
         <div className="project-grid">
           {projects.slice(0, 3).map((project) => <ProjectCard key={project.slug} project={project} />)}
         </div>
-        <Link className="text-link" to="/projects">See the full portfolio →</Link>
+        <Link className="text-link" to="/projects">Explore the full portfolio →</Link>
       </div>
     </section>
   );

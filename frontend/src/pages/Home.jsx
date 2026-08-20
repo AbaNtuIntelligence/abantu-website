@@ -15,11 +15,11 @@ export default function Home() {
       <Sectors />
       <Philosophy />
       <Insights />
-      <section className="cta-section">
+      <section className="cta-section ai-cta">
         <div className="container center">
-          <span className="eyebrow">Build something meaningful</span>
-          <h2>Have a digital problem worth solving?</h2>
-          <p>Tell us what is not working. We can explore the system, the users and the right path forward.</p>
+          <span className="eyebrow">A.I. starts with a real problem</span>
+          <h2>What could become possible if your intelligence had a better system?</h2>
+          <p>Bring us the problem, the process, the idea or the ambition. We will help determine what should be digital, what should be intelligent and what should remain human.</p>
           <Button to="/contact">Start a conversation</Button>
         </div>
       </section>

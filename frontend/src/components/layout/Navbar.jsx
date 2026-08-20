@@ -24,9 +24,10 @@ export default function Navbar() {
     />
   </div>
 
-  <span className="brand-text">
-    <strong>AbaNtu</strong>
-    <small>INTELLIGENCE</small>
+   <span className="brand-text">
+    <small> A.I. </small>
+    <strong>| AbaNtu </strong>
+    <small>Intelligence™</small>
   </span>
 </Link>
 

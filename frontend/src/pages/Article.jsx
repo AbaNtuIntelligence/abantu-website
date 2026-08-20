@@ -11,7 +11,7 @@ export default function Article() {
   const { data } = useApiResource(loader, null);
   const article = data || local;
 
-  if (!article) return <main className="page"><div className="container narrow center"><h1>Article not found.</h1><Link className="text-link" to="/blog">Back to insights →</Link></div></main>;
+  if (!article) return <main className="page"><div className="container narrow center"><h1>Insight not found.</h1><Link className="text-link" to="/blog">Back to insights →</Link></div></main>;
 
   return (
     <main className="page">
@@ -23,9 +23,14 @@ export default function Article() {
           <div className="article-body" dangerouslySetInnerHTML={{ __html: article.content }} />
         ) : (
           <div className="article-body">
-            <p>This insight is being developed as part of the AbaNtu Intelligence knowledge platform.</p>
-            <p>Our aim is to document practical lessons from designing and building digital systems for African organisations, institutions and communities.</p>
-            <p>When the Django publishing API is connected, this page will render the full article authored and published through the administrative CMS.</p>
+            {article.scenario && <><h2>The real-world scenario</h2><p>{article.scenario}</p></>}
+            {article.problem && <><h2>The intelligence gap</h2><p>{article.problem}</p></>}
+            {article.perspective && <><h2>Our perspective</h2><p>{article.perspective}</p></>}
+            {article.takeaway && <><h2>The takeaway</h2><p>{article.takeaway}</p></>}
+            <div className="article-cms-note">
+              <strong>A.I. in practice</strong>
+              <p>When the Django publishing API is connected, this page will render the full article authored and published through the administrative CMS. The local catalogue currently provides the same real-world editorial structure so the experience is complete before the publishing layer is connected.</p>
+            </div>
           </div>
         )}
       </article>

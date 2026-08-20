@@ -1,0 +1,842 @@
+/* ============================================================
+   SOCIAL ORBIT
+   Futuristic 2026 Tech Company Social Interface
+   ============================================================ */
+
+.social-orbit {
+  position: fixed;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-family: inherit;
+
+  pointer-events: none;
+}
+
+/* ============================================================
+   AMBIENT GLOW
+   ============================================================ */
+
+.social-orbit-ambient {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+
+  width: 150px;
+  height: 420px;
+
+  transform: translateY(-50%);
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(0, 170, 255, 0.08),
+      transparent 68%
+    );
+
+  filter: blur(25px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+/* 1. Define each platform's brand color on the anchor itself */
+.social-orbit-linkedin   { color: #0A66C2; }  /* indigo */
+.social-orbit-youtube    { color: #FF0000; }  /* red */
+.social-orbit-github     { color: #181717; }  /* dark */
+.social-orbit-x          { color: #000000; }  /* black */
+.social-orbit-instagram  { color: #E4405F; }  /* pink/red */
+.social-orbit-whatsapp   { color: #25D366; }  /* green */
+
+/* 2. Make the description inherit that color from its parent anchor */
+.social-orbit-item .social-orbit-description {
+  color: inherit;  /* <-- this is the magic line */
+}
+
+.social-orbit-item .social-orbit-name {
+  color: inherit;
+}
+/* ============================================================
+   VERTICAL CONNECT LABEL
+   ============================================================ */
+
+.social-orbit-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  opacity: 0.55;
+
+  pointer-events: auto;
+}
+
+.social-orbit-label-line {
+  width: 1px;
+  height: 42px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(73, 214, 255, 0.8)
+  );
+}
+
+.social-orbit-label-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.28em;
+
+  color: rgba(160, 220, 255, 0.8);
+
+  text-shadow:
+    0 0 10px rgba(0, 190, 255, 0.5);
+}
+
+/* ============================================================
+   MAIN GLASS RAIL
+   ============================================================ */
+
+.social-orbit-rail {
+  position: relative;
+
+  width: 62px;
+
+  padding: 9px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(14, 27, 53, 0.88),
+      rgba(4, 9, 23, 0.93)
+    );
+
+  border: 1px solid rgba(105, 190, 255, 0.2);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 0 25px rgba(0, 150, 255, 0.06);
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  pointer-events: auto;
+
+  overflow: visible;
+}
+
+/* ============================================================
+   TOP CONNECT BUTTON
+   ============================================================ */
+
+.social-orbit-connect {
+  position: relative;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(117, 67, 255, 0.28),
+      rgba(0, 201, 255, 0.18)
+    );
+
+  border: 1px solid rgba(120, 210, 255, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.social-orbit-connect:hover {
+  transform: translateX(-4px);
+
+  border-color: rgba(100, 220, 255, 0.65);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(117, 67, 255, 0.48),
+      rgba(0, 201, 255, 0.3)
+    );
+
+  box-shadow:
+    0 0 20px rgba(65, 184, 255, 0.25);
+}
+
+.social-orbit-connect-icon {
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #69dcff;
+}
+
+.connect-orbit-icon {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================================
+   TOOLTIP
+   ============================================================ */
+
+.social-orbit-tooltip {
+  position: absolute;
+
+  right: calc(100% + 12px);
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    translateX(8px);
+
+  width: max-content;
+
+  padding: 9px 13px;
+
+  color: #dff8ff;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.02em;
+
+  background: rgba(4, 13, 30, 0.92);
+
+  border: 1px solid rgba(91, 207, 255, 0.2);
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 180, 255, 0.08);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+
+  pointer-events: none;
+}
+
+.social-orbit-connect:hover .social-orbit-tooltip {
+  opacity: 1;
+  visibility: visible;
+
+  transform:
+    translateY(-50%)
+    translateX(0);
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.social-orbit-divider {
+  width: 34px;
+  height: 1px;
+
+  margin: 9px 0;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(112, 207, 255, 0.25),
+      transparent
+    );
+}
+
+/* ============================================================
+   SOCIAL ITEMS
+   ============================================================ */
+
+.social-orbit-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.social-orbit-item {
+  position: relative;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(221, 243, 255, 0.75);
+
+  text-decoration: none;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid transparent;
+
+  transition:
+    transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.social-orbit-item:hover,
+.social-orbit-item.is-active .social-orbit-description {
+  transform: translateX(-7px) scale(1.04);
+color: inherit;
+  
+
+  background:
+    #64e5bc;;
+
+  border-color:
+    rgba(94, 205, 255, 0.35);
+
+  box-shadow:
+    0 0 18px rgba(30, 177, 255, 0.12);
+}
+
+.social-orbit-icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-orbit-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================================
+   EXPANDING SOCIAL INFORMATION
+   ============================================================ */
+
+.social-orbit-name,
+.social-orbit-description {
+  position: absolute;
+  
+  border-radius: 3px;
+
+  right: calc(100% + 13px);
+
+  white-space: nowrap;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transform: translateX(10px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-orbit-name {
+  top: 2px;
+
+  color: #ffffff;
+  background: rgba(221, 247, 240, 0.8);
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+.social-orbit-description {
+  bottom: 6px;
+
+  color: rgba(184, 218, 237, 0.7);
+
+  font-size: 9px;
+}
+
+
+
+.social-orbit-item:hover .social-orbit-name,
+.social-orbit-item:hover .social-orbit-description,
+.social-orbit-item.is-active .social-orbit-name,
+.social-orbit-item.is-active .social-orbit-description {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/* ============================================================
+   SOCIAL PLATFORM DETAILS
+   ============================================================ */
+
+.social-orbit-linkedin:hover {
+  box-shadow:
+    0 0 22px rgba(0, 119, 181, 0.28);
+}
+
+.social-orbit-github:hover {
+  box-shadow:
+    0 0 22px rgba(170, 170, 255, 0.18);
+}
+
+.social-orbit-youtube:hover {
+  box-shadow:
+    0 0 22px rgba(255, 50, 50, 0.2);
+}
+
+.social-orbit-x:hover {
+  box-shadow:
+    0 0 22px rgba(255, 255, 255, 0.12);
+}
+
+.social-orbit-instagram:hover {
+  box-shadow:
+    0 0 22px rgba(210, 80, 180, 0.22);
+}
+
+/* ============================================================
+   DIRECT WHATSAPP ACTION
+   ============================================================ */
+
+.social-orbit-direct {
+  position: relative;
+
+  width: 44px;
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 190, 140, 0.18),
+      rgba(0, 130, 110, 0.08)
+    );
+
+  border: 1px solid rgba(61, 224, 176, 0.2);
+
+  transition:
+    width 0.3s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.social-orbit-direct:hover {
+  width: 48px;
+
+  transform: translateX(-4px);
+
+  box-shadow:
+    0 0 22px rgba(0, 210, 150, 0.2);
+}
+
+.social-orbit-direct-icon {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+
+  color: #64e5bc;
+}
+
+.social-orbit-direct-text {
+  position: absolute;
+
+  right: calc(100% + 12px);
+
+  display: flex;
+  flex-direction: column;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transform: translateX(8px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+
+  
+
+}
+
+.social-orbit-direct:hover .social-orbit-direct-text {
+  opacity: 1;
+
+  transform: translateX(0);
+
+   background: black;
+   border-radius: 3px;
+}
+
+.social-orbit-direct-text strong {
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+
+  color: #62e4ba;
+}
+
+.social-orbit-direct-text small {
+  margin-top: 3px;
+
+  font-size: 10px;
+
+ color: #62e4ba;
+}
+
+.social-orbit-direct-arrow {
+  position: absolute;
+
+  right: -4px;
+  top: -4px;
+
+  width: 14px;
+  height: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 8px;
+
+  color: #74f0c7;
+
+  background: #061b18;
+
+  border: 1px solid rgba(91, 234, 190, 0.3);
+
+  border-radius: 50%;
+}
+
+.social-orbit-direct-pulse {
+  position: absolute;
+
+  inset: -3px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(66, 226, 178, 0.15);
+
+  animation: socialOrbitPulse 3s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes socialOrbitPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.06);
+  }
+}
+
+/* ============================================================
+   SUBTLE RAIL ANIMATION
+   ============================================================ */
+
+.social-orbit-rail::before {
+  content: "";
+
+  position: absolute;
+
+  top: 10px;
+  bottom: 10px;
+  left: 3px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(60, 205, 255, 0.4),
+      transparent
+    );
+
+  opacity: 0.35;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .social-orbit {
+    right: 10px;
+  }
+
+  .social-orbit-label {
+    display: none;
+  }
+
+  .social-orbit-rail {
+    width: 56px;
+    padding: 7px;
+  }
+
+  .social-orbit-item,
+  .social-orbit-connect,
+  .social-orbit-direct {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-orbit-direct:hover {
+    width: 44px;
+  }
+}
+
+/* ============================================================
+   MOBILE — BOTTOM FLOATING DOCK
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .social-orbit {
+    top: auto;
+    bottom: 12px;
+    left: 50%;
+    right: auto;
+
+    transform: translateX(-50%);
+
+    width: auto;
+
+    display: block;
+  }
+
+  .social-orbit-ambient {
+    top: auto;
+    bottom: -30px;
+    right: 50%;
+
+    width: 300px;
+    height: 100px;
+
+    transform: translateX(50%);
+
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(0, 170, 255, 0.12),
+        transparent 70%
+      );
+  }
+
+  .social-orbit-rail {
+    width: auto;
+
+    min-width: 0;
+
+    padding: 7px 9px;
+
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 20px;
+
+    gap: 5px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(11, 24, 48, 0.94),
+        rgba(3, 8, 20, 0.96)
+      );
+
+    box-shadow:
+      0 12px 40px rgba(0, 0, 0, 0.55),
+      0 0 30px rgba(0, 150, 255, 0.08);
+
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .social-orbit-label {
+    display: none;
+  }
+
+  .social-orbit-connect {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+  }
+
+  .social-orbit-links {
+    flex-direction: row;
+
+    gap: 4px;
+  }
+
+  .social-orbit-item {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+  }
+
+  .social-orbit-item:hover,
+  .social-orbit-item.is-active {
+    transform: translateY(-4px) scale(1.05);
+  }
+
+  .social-orbit-direct {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+  }
+
+  .social-orbit-direct:hover {
+    width: 38px;
+
+    transform: translateY(-4px);
+  }
+
+  .social-orbit-divider {
+    width: 1px;
+    height: 24px;
+
+    margin: 0 2px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        transparent,
+        rgba(112, 207, 255, 0.35),
+        transparent
+      );
+  }
+
+  .social-orbit-name,
+  .social-orbit-description,
+  .social-orbit-tooltip,
+  .social-orbit-direct-text {
+    display: none;
+  }
+
+  .social-orbit-direct-arrow {
+    width: 12px;
+    height: 12px;
+
+    font-size: 7px;
+  }
+
+  .social-orbit-rail::before {
+    display: none;
+  }
+}
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 430px) {
+  .social-orbit {
+    bottom: 9px;
+  }
+
+  .social-orbit-rail {
+    padding: 6px 7px;
+
+    gap: 3px;
+  }
+
+  .social-orbit-item,
+  .social-orbit-connect,
+  .social-orbit-direct {
+    width: 34px;
+    height: 34px;
+  }
+
+  .social-orbit-links {
+    gap: 2px;
+  }
+
+  .social-orbit-svg {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .social-orbit *,
+  .social-orbit *::before,
+  .social-orbit *::after {
+    animation: none !important;
+
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Keyboard focus */
+.social-orbit a:focus-visible {
+  outline: 2px solid rgba(90, 215, 255, 0.9);
+  outline-offset: 3px;
+}

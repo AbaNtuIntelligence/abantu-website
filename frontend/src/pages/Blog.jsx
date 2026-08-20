@@ -13,19 +13,19 @@ export default function Blog() {
   return (
     <main className="page">
       <div className="container page-intro">
-        <span className="eyebrow">Insights</span>
-        <h1>Ideas behind the systems we build.</h1>
-        <p>Research, practical perspectives and lessons from building digital products in an African context.</p>
-        {loading && <small className="api-note">Live publishing API will take over automatically when available.</small>}
+        <span className="eyebrow">Intelligence in public</span>
+        <h1>Ideas from the work, the world and the systems between them.</h1>
+        <p>Perspectives on artificial intelligence, human intelligence, digital transformation, education, SMME digitalisation, civic technology and the realities of building in Africa.</p>
+        {loading && <small className="api-note">Loading published insights… showing the local knowledge catalogue until the publishing API responds.</small>}
       </div>
       <section className="section">
         <div className="container insight-grid insight-grid-large">
           {items.map((item) => (
             <article className="insight-card" key={item.slug}>
-              <span className="tag">{item.category || "AbaNtu Intelligence"}</span>
+              <span className="tag">{item.category}</span>
               <h2>{item.title}</h2>
               <p>{item.excerpt || item.summary}</p>
-              <Link className="text-link" to={`/blog/${item.slug}`}>Read article →</Link>
+              <Link className="text-link" to={`/blog/${item.slug}`}>Read insight →</Link>
             </article>
           ))}
         </div>

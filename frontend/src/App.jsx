@@ -10,10 +10,15 @@ import Blog from "./pages/Blog";
 import Article from "./pages/Article";
 import Contact from "./pages/Contact";
 import Partnership from "./pages/Partnership";
+import SocialOrbit from "./components/SocialOrbit";
+
 
 export default function App() {
   return (
     <SiteLayout>
+
+      <SocialOrbit />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -27,6 +32,7 @@ export default function App() {
         <Route path="/partnership" element={<Partnership />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
     </SiteLayout>
   );
 }

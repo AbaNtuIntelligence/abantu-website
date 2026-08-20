@@ -1,13 +1,12 @@
-import SectionHeading from "../components/ui/SectionHeading";
 import { sectors } from "../data/site";
 
 export default function Sectors() {
   return (
     <main className="page">
       <div className="container page-intro">
-        <span className="eyebrow">Sectors</span>
-        <h1>Technology where institutional and human needs meet.</h1>
-        <p>We focus on sectors where better digital infrastructure can improve access, operations, opportunity and organisational capacity.</p>
+        <span className="eyebrow">Intelligence across sectors</span>
+        <h1>Different problems. The same A.I. principle.</h1>
+        <p>Every sector has its own language, constraints and people. We design around those realities, then decide where digital systems, data, automation and artificial intelligence can create meaningful capability.</p>
       </div>
       <section className="section">
         <div className="container sector-grid sector-grid-large">
