@@ -1,4 +1,5 @@
 import SectionHeading from "../components/ui/SectionHeading";
+import { Link } from "react-router-dom";
 // You may keep aiPhilosophy and values if you still need them elsewhere,
 // but we'll override the content here for the About page.
 // We'll import new data or define inline for clarity.
@@ -275,9 +276,9 @@ export default function About() {
             Explore what we’ve already built.
           </p>
           {/* Link to your portfolio page */}
-          <a href="/projects" className="button" style={{ marginTop: "1.5rem", display: "inline-block" }}>
-            See our work →
-          </a>
+          <Link to="/projects" className="button" style={{ marginTop: "1.5rem", display: "inline-block" }}>
+  See our work →
+</Link>
         </div>
       </section>
 
