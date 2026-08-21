@@ -7,6 +7,16 @@ export const site = {
   location: "Johannesburg, South Africa",
 };
 
+
+// Add to data/site.js
+export const principles = [
+  ["Problem first", "Understand before building. Always start with the real need, not a predetermined solution."],
+  ["People first", "Technology serves humans. Design for dignity, accessibility, and empowerment."],
+  ["Appropriate technology", "Don't over‑engineer. Choose the simplest tool that genuinely solves the problem."],
+  ["Build for reality", "Consider bandwidth, budgets, skills, maintenance, and the local context."],
+  ["Build for tomorrow", "Create systems capable of evolving as needs and technologies change."]
+];
+
 export const aiPhilosophy = {
   label: "The AbaNtu Intelligence philosophy",
   title: "Before Artificial Intelligence, there is AbaNtu Intelligence.",
@@ -20,6 +30,11 @@ export const aiPhilosophy = {
     ["03", "Intelligence", "Turn knowledge, information and insight into something structured and usable."],
     ["04", "Systems", "Build digital products that make people and organisations more capable."],
     ["05", "Impact", "Measure success by what becomes possible after the system exists."],
+    ["06","Problem first", "Understand before building. Always start with the real need, not a predetermined solution."],
+    ["07","People first", "Technology serves humans. Design for dignity, accessibility, and empowerment."],
+    ["08","Appropriate technology", "Don't over‑engineer. Choose the simplest tool that genuinely solves the problem."],
+    ["09","Build for reality", "Consider bandwidth, budgets, skills, maintenance, and the local context."],
+    ["10","Build for tomorrow", "Create systems capable of evolving as needs and technologies change."],
   ],
 };
 
