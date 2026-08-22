@@ -42,7 +42,7 @@ img { max-width: 100%; display: block; }
 
 .brand-text {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   line-height: 1;
 }
@@ -63,111 +63,226 @@ img { max-width: 100%; display: block; }
 /* ================================
    FOOTER BRAND
    ================================ */
+/* ============================
+   FOOTER - FLEX STRAIGHT LINE
+   ============================ */
 
-.footer .brand {
-  margin-bottom: 1.25rem;
+./* ============================
+   FOOTER - COMPLETE
+   ============================ */
+
+.footer {
+  background: #0f1a2b;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2.5rem 0 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.footer .brand-logo {
-  width: 56px;
-  height: 56px;
+/* --- Main Footer Content - Flex Row --- */
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 1.5rem;
 }
 
-.footer .brand-logo img {
-  width: 74px;
-  height: 74px;
+/* --- Each Section --- */
+.footer-brand-section,
+.footer-links-section,
+.footer-contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.footer .brand-text strong {
-  font-size: 1.15rem;
+.footer-brand-section {
+  flex: 2;
+  min-width: 200px;
 }
 
-.footer .brand-text small {
-  margin-top: 0.3rem;
-  font-size: 0.58rem;
+/* --- BRAND - MATCHES NAVBAR --- */
+.brand.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
 }
 
-/* Footer description */
-.footer .brand + p {
-  max-width: 300px;
-  margin: 0;
+.brand.footer-brand:hover {
+  opacity: 0.8;
 }
 
-/* Mobile */
+.brand-logo-wrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.brand-logo-image {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-trademark {
+  position: absolute;
+  top: -2px;
+  right: -6px;
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: #64b5f6;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  gap: 0.2rem;
+}
+
+.brand-text .brand-ai {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64b5f6;
+}
+
+.brand-text .brand-divider {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.brand-text .brand-name {
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.brand-text .brand-intelligence {
+  margin-top: 0.28rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-ai-line {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0.25rem 0 0 0;
+  letter-spacing: 0.02em;
+}
+
+/* --- Link Sections --- */
+.footer-links-section h4,
+.footer-contact-section h4 {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0 0 0.25rem 0;
+}
+
+.footer-links-section a,
+.footer-contact-section a,
+.footer-contact-section span {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+  line-height: 1.6;
+}
+
+.footer-links-section a:hover,
+.footer-contact-section a:hover {
+  color: #64b5f6;
+}
+
+.footer-contact-section span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+}
+
+/* --- Footer Bottom - Flex Row --- */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-tagline {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-values {
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
 @media (max-width: 768px) {
-  .footer .brand-logo {
+  .footer-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .footer-brand-section {
+    flex: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-logo-image {
     width: 48px;
     height: 48px;
   }
 
-  .footer .brand-logo img {
-    width: 64px;
-    height: 64px;
+  .brand-text .brand-name {
+    font-size: 0.9rem;
   }
 
-  .footer .brand-text strong {
-    font-size: 1.05rem;
+  .brand-text .brand-ai {
+    font-size: 0.7rem;
   }
 
-  .footer .brand-text small {
-    font-size: 0.52rem;
+  .brand-text .brand-intelligence {
+    font-size: 0.45rem;
   }
 }
-
-/* ================================
-   FOOTER BRAND
-   ================================ */
-
-.footer .brand {
-  margin-bottom: 1.25rem;
-}
-
-.footer .brand-logo {
-  width: 56px;
-  height: 56px;
-}
-
-.footer .brand-logo img {
-  width: 74px;
-  height: 74px;
-}
-
-.footer .brand-text strong {
-  font-size: 1.15rem;
-}
-
-.footer .brand-text small {
-  margin-top: 0.3rem;
-  font-size: 0.58rem;
-}
-
-/* Footer description */
-.footer .brand + p {
-  max-width: 300px;
-  margin: 0;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .footer .brand-logo {
-    width: 48px;
-    height: 48px;
-  }
-
-  .footer .brand-logo img {
-    width: 64px;
-    height: 64px;
-  }
-
-  .footer .brand-text strong {
-    font-size: 1.05rem;
-  }
-
-  .footer .brand-text small {
-    font-size: 0.52rem;
-  }
-}
-
 .project-card-image {
   width: 100%;
   aspect-ratio: 16 / 10;

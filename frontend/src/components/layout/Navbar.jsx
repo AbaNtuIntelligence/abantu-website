@@ -25,10 +25,8 @@ export default function Navbar() {
   </div>
 
    <span className="brand-text">
-    <small> A.I. </small>
-    <strong>| AbaNtu </strong>
-    <small>Intelligence™</small>
-  </span>
+    <small> A.I. </small><strong>| AbaNtu </strong><small>Intelligence™</small>
+    </span>
 </Link>
 
         <nav className="desktop-nav">

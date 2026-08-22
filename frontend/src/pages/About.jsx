@@ -161,11 +161,11 @@ export default function About() {
         }}>
           <img
             src="/caio.jfif" // Replace with actual path
-            alt="Chief AI Officer"
+            alt="Co-Founder & Chief AI Officer"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
-        <h3 style={{ textAlign: "center", marginBottom: "0.25rem" }}>Chief AI Officer (CAIO)</h3>
+        <h3 style={{ textAlign: "center", marginBottom: "0.25rem" }}>Co-Founder &amp; Chief AI Officer (CAIO)</h3>
         <p style={{ textAlign: "center", fontSize: "1rem", fontWeight: "600", marginBottom: "0.25rem" }}>
           Sibulelo Nicky Mahashana
         </p>
