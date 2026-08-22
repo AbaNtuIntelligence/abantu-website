@@ -77,7 +77,7 @@ export default function About() {
   <div className="container">
     <SectionHeading
       eyebrow="The people behind the intelligence"
-      title="Two leaders, one philosophy."
+      title="Multiple intelligences, one philosophy."
     />
     <p style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto 2.5rem auto", color: "var(--text-secondary)" }}>
       AbaNtu is founder-led and deliberately collaborative. Our leadership brings together 
