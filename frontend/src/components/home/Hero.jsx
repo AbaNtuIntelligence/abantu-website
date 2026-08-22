@@ -46,8 +46,8 @@ export default function Hero() {
 
       <div className="container hero-grid">
         <div className="hero-copy">
-          <span className="eyebrow">A.I. · AbaNtu Intelligence · South Africa</span>
-          <div className="hero-ai-mark">A.I.</div>
+          <span className="eyebrow"><div className="hero-ai-mark">A.I.</div> · AbaNtu Intelligence · South Africa</span>
+          
           <h1>Before Artificial Intelligence, there is <em>AbaNtu Intelligence.</em></h1>
           <p className="hero-lead">
             We combine human intelligence, digital engineering and emerging AI to build systems that help people, institutions and businesses understand, connect, create and grow.
