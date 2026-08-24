@@ -21,12 +21,14 @@ ALLOWED_HOSTS = [
     host.strip()
     for host in os.getenv(
         "ALLOWED_HOSTS",
-        "localhost,127.0.0.1"
+        "localhost,127.0.0.1,abantu-website.onrender.com"
     ).split(",")
     if host.strip()
 ]
 
-
+if os.environ.get("RENDER"):
+    ALLOWED_HOSTS.append(".onrender.com")
+    
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -172,10 +174,11 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-]
+
+
+
+if os.environ.get("RENDER"):
+    ALLOWED_HOSTS.append(".onrender.com")
 
 CORS_ALLOW_ALL_ORIGINS = True
 
