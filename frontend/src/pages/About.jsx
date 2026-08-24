@@ -113,7 +113,7 @@ export default function About() {
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
-        <h3 style={{ textAlign: "center", marginBottom: "0.25rem" }}>Founder &amp; CEO</h3>
+        <h3 style={{ textAlign: "center", marginBottom: "0.25rem" }}>Founder, Developer &amp; Community Digital Strategist</h3>
         <p style={{ textAlign: "center", fontSize: "1rem", fontWeight: "600", marginBottom: "0.25rem" }}>
           Thabele Ka Plaatjie Phangalele
         </p>
