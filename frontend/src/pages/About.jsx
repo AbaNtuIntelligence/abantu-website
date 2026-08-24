@@ -109,7 +109,7 @@ export default function About() {
         }}>
           <img
             src="/TEPP.jpeg" // Replace with actual path
-            alt="Founder & CEO"
+            alt="Founder, Developer & Community Digital Strategist"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
         </div>
