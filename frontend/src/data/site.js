@@ -159,7 +159,7 @@ export const projects = [
       "Render",
     ],
     image: "/projects/umsebenziwethu.png",
-    liveUrl: "https://umsebenziwethu-jobmarket-2.onrender.com/",
+    liveUrl: "https://umsebenziwethu-jobmarket-frontend.onrender.com/",
     strategic:
       "A foundation for a broader employment and opportunity ecosystem.",
   },

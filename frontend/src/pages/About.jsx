@@ -108,7 +108,7 @@ export default function About() {
           margin: "0 auto 1.25rem auto" 
         }}>
           <img
-            src="/TEPP.jpeg" // Replace with actual path
+            src="/TEPP.jpeg" 
             alt="Founder, Developer & Community Digital Strategist"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
@@ -130,7 +130,7 @@ export default function About() {
             fontWeight: "500"
           }}
         >
-          ✉ hello@abantu-intelligence.com
+        
         </a>
         <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>
           A builder at heart. Ka Plaatjie started AbaNtu Intelligence to prove that African organisations 
@@ -182,7 +182,7 @@ export default function About() {
             fontWeight: "500"
           }}
         >
-          ✉ ai@abantu-intelligence.com
+      
         </a>
         <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>
           The bridge between cutting-edge AI and genuine human impact. Nicky turns the 
