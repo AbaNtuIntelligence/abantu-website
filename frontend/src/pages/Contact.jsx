@@ -1,10 +1,54 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import SectionHeading from "../components/ui/SectionHeading";
 import { site } from "../data/site";
+import { apiFetch } from "../services/api";
 
 export default function Contact() {
-  const [sent, setSent] = useState(false);
-  function submit(e) { e.preventDefault(); setSent(true); }
+  const [state, setState] = useState("idle");
+  const [feedback, setFeedback] = useState("");
+  const submitting = useRef(false);
+  const submission = useRef(null);
+
+  async function submit(event) {
+    event.preventDefault();
+    if (submitting.current) return;
+    const form = event.currentTarget;
+    const fields = new FormData(form);
+    const payload = {
+      name: String(fields.get("name") || "").trim(),
+      organisation: String(fields.get("organisation") || "").trim(),
+      email: String(fields.get("email") || "").trim(),
+      message: String(fields.get("message") || "").trim(),
+      website: String(fields.get("website") || ""),
+    };
+    const fingerprint = JSON.stringify(payload);
+    // Keep the same key after a network timeout; changing the content starts a
+    // new submission. Nothing containing visitor details is saved to storage.
+    if (!submission.current || submission.current.fingerprint !== fingerprint) {
+      submission.current = { fingerprint, id: crypto.randomUUID() };
+    }
+    submitting.current = true;
+    setState("sending");
+    setFeedback("");
+    try {
+      const result = await apiFetch("/enquiries/", {
+        method: "POST",
+        body: JSON.stringify({ ...payload, submission_id: submission.current.id }),
+      });
+      if (!result.reference || !result.message) {
+        throw new Error("The server did not confirm receipt. Please retry or use the email link.");
+      }
+      setState("success");
+      setFeedback(result.message);
+      form.reset();
+      submission.current = null;
+    } catch (error) {
+      setState("error");
+      setFeedback(error.message);
+    } finally {
+      submitting.current = false;
+    }
+  }
 
   return (
     <main className="page">
@@ -23,12 +67,23 @@ export default function Contact() {
               <span>{site.location}</span>
             </div>
           </div>
-          <form className="contact-form" onSubmit={submit}>
-            <label>Name<input name="name" required /></label>
-            <label>Organisation<input name="organisation" /></label>
-            <label>Email<input type="email" name="email" required /></label>
-            <label>What are you trying to solve?<textarea name="message" rows="7" required /></label>
-            <button className="button button-primary" type="submit">{sent ? "Message prepared" : "Start the conversation"}</button>
+          <form className="contact-form" onSubmit={submit} aria-busy={state === "sending"}>
+            <fieldset disabled={state === "sending"}>
+              <legend className="contact-sr-only">Send an enquiry to AbaNtu Intelligence</legend>
+              <label>Name<input name="name" autoComplete="name" maxLength={150} required /></label>
+              <label>Organisation<input name="organisation" autoComplete="organization" maxLength={200} /></label>
+              <label>Email<input type="email" name="email" autoComplete="email" maxLength={254} required /></label>
+              <label>What are you trying to solve?<textarea name="message" rows="7" minLength={10} maxLength={10000} required /></label>
+              <div className="contact-honeypot" aria-hidden="true">
+                <label>Leave this field empty<input name="website" tabIndex={-1} autoComplete="off" /></label>
+              </div>
+              <p className="contact-privacy">We’ll use these details to respond to your enquiry. Please avoid including passwords or sensitive personal documents.</p>
+              <button className="button button-primary" type="submit" disabled={state === "sending"}>
+                {state === "sending" ? "Sending enquiry…" : "Start the conversation"}
+              </button>
+            </fieldset>
+            {feedback && <p className={`contact-feedback contact-feedback-${state}`} role={state === "error" ? "alert" : "status"}>{feedback}</p>}
+            {state === "error" && <a className="contact-fallback" href={`mailto:${site.email}`}>Email {site.email} directly</a>}
           </form>
         </div>
       </section>

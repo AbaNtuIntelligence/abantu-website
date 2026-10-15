@@ -2,7 +2,7 @@ export const site = {
   name: "AbaNtu Intelligence",
   descriptor: "A.I. rooted in people. Digital intelligence built for real-world impact.",
   positioning: "AbaNtu Intelligence is where human intelligence meets artificial intelligence to create practical digital systems.",
-  email: "thabelephangalele@outlook.com",
+  email: "info@abantu-intelligence.co.za",
   phone: "+27 73 086 2149",
   location: "Johannesburg, South Africa",
 };

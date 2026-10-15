@@ -1,4 +1,4 @@
-﻿from django.db import models
+from django.db import models
 
 
 class Enquiry(models.Model):
@@ -82,6 +82,17 @@ class Enquiry(models.Model):
         choices=STATUS_CHOICES,
         default="new"
     )
+
+    submission_id = models.UUIDField(null=True, blank=True, unique=True, editable=False)
+    email_status = models.CharField(
+        max_length=12, default="pending", db_index=True,
+        choices=[("pending", "Pending"), ("sending", "Sending"), ("sent", "Accepted by mail server"),
+                 ("failed", "Failed"), ("uncertain", "Delivery uncertain — check inbox"), ("legacy", "Historical enquiry — no email requested")],
+    )
+    email_attempts = models.PositiveIntegerField(default=0)
+    email_last_attempt_at = models.DateTimeField(null=True, blank=True)
+    email_sent_at = models.DateTimeField(null=True, blank=True)
+    email_last_error = models.CharField(max_length=100, blank=True)
 
     created_at = models.DateTimeField(
         auto_now_add=True

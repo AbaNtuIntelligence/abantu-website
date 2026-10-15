@@ -1,4 +1,4 @@
-﻿import os
+import os
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -180,10 +180,34 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 if os.environ.get("RENDER"):
     ALLOWED_HOSTS.append(".onrender.com")
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [value.strip() for value in os.getenv(
+    "CORS_ALLOWED_ORIGINS",
+    "https://abantu-intelligence.co.za,https://www.abantu-intelligence.co.za,https://abantu-website-2mpf.onrender.com,http://localhost:5173,http://127.0.0.1:5173"
+).split(",") if value.strip()]
+CONTACT_ALLOWED_ORIGINS = CORS_ALLOWED_ORIGINS
+
+# HMailPlus: authenticated SMTP with STARTTLS. Secrets belong only on the backend.
+EMAIL_BACKEND = os.getenv("EMAIL_BACKEND", "django.core.mail.backends.smtp.EmailBackend")
+EMAIL_HOST = os.getenv("EMAIL_HOST", "smtp.hmailplus.com")
+EMAIL_PORT = int(os.getenv("EMAIL_PORT", "587"))
+EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", "True").lower() == "true"
+EMAIL_USE_SSL = os.getenv("EMAIL_USE_SSL", "False").lower() == "true"
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "info@abantu-intelligence.co.za")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
+EMAIL_TIMEOUT = int(os.getenv("EMAIL_TIMEOUT", "15"))
+DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL", "AbaNtu Intelligence <info@abantu-intelligence.co.za>")
+CONTACT_RECIPIENT_EMAIL = os.getenv("CONTACT_RECIPIENT_EMAIL", "info@abantu-intelligence.co.za")
+CONTACT_BURST_RATE = os.getenv("CONTACT_BURST_RATE", "5/minute")
+CONTACT_SUSTAINED_RATE = os.getenv("CONTACT_SUSTAINED_RATE", "20/hour")
+CONTACT_EMAIL_RATE = os.getenv("CONTACT_EMAIL_RATE", "5/hour")
+DATA_UPLOAD_MAX_MEMORY_SIZE = 65536
+
 
 
 REST_FRAMEWORK = {
+    # Default to REMOTE_ADDR; only configure proxy hops for a trusted proxy chain.
+    "NUM_PROXIES": int(os.getenv("CONTACT_NUM_PROXIES", "0")),
 
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",

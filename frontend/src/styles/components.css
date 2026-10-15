@@ -237,3 +237,13 @@ p { color: var(--ink-soft); }
 .button-secondary { border-color:var(--line); background:#f2f5f6; color:var(--ink); }
 .button-secondary:hover { transform:translateY(-2px); border-color:#aebbc7; }
 @media (max-width:620px) { .project-card-actions { flex-direction:column; align-items:stretch; } }
+
+/* Contact delivery: accessible status, preserved fields on error, no layout change. */
+.contact-form fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+.contact-form button:disabled { opacity: .65; cursor: wait; }
+.contact-privacy { font-size: .85rem; margin: 0 0 18px; color: var(--muted, #59635f); }
+.contact-feedback { margin-top: 18px; padding: 14px; border-radius: 8px; overflow-wrap: anywhere; }
+.contact-feedback-success { color: #195431; background: #edf7ef; border: 1px solid #bedcc5; }
+.contact-feedback-error { color: #8f2825; background: #fff1ef; border: 1px solid #ecc6c1; }
+.contact-fallback { display: inline-block; margin-top: 12px; overflow-wrap: anywhere; text-decoration: underline; }
+.contact-honeypot, .contact-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }

@@ -1,4 +1,4 @@
-﻿from django.contrib import admin
+from django.contrib import admin
 
 from .models import Enquiry
 
@@ -11,12 +11,14 @@ class EnquiryAdmin(admin.ModelAdmin):
         "organisation",
         "organisation_type",
         "status",
+        "email_status",
         "created_at",
     )
 
     list_filter = (
         "organisation_type",
         "status",
+        "email_status",
         "sector",
     )
 
@@ -30,4 +32,10 @@ class EnquiryAdmin(admin.ModelAdmin):
     readonly_fields = (
         "created_at",
         "updated_at",
+        "submission_id",
+        "email_status",
+        "email_attempts",
+        "email_last_attempt_at",
+        "email_sent_at",
+        "email_last_error",
     )

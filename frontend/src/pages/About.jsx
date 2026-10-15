@@ -1,5 +1,6 @@
 import SectionHeading from "../components/ui/SectionHeading";
 import { Link } from "react-router-dom";
+import { site } from "../data/site";
 // You may keep aiPhilosophy and values if you still need them elsewhere,
 // but we'll override the content here for the About page.
 // We'll import new data or define inline for clarity.
@@ -119,7 +120,7 @@ export default function About() {
         </p>
         {/* --- EMAIL CHANNEL HANDLER (CEO) --- */}
         <a 
-          href="mailto:hello@abantu-intelligence.com" 
+          href={`mailto:${site.email}`}
           style={{ 
             display: "block", 
             textAlign: "center", 
@@ -171,7 +172,7 @@ export default function About() {
         </p>
         {/* --- EMAIL CHANNEL HANDLER (CAIO) --- */}
         <a 
-          href="mailto:ai@abantu-intelligence.com" 
+          href={`mailto:${site.email}`}
           style={{ 
             display: "block", 
             textAlign: "center", 
