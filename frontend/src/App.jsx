@@ -11,11 +11,13 @@ import Article from "./pages/Article";
 import Contact from "./pages/Contact";
 import Partnership from "./pages/Partnership";
 import SocialOrbit from "./components/SocialOrbit";
+import SeoManager from "./components/SeoManager";
 
 
 export default function App() {
   return (
     <SiteLayout>
+      <SeoManager />
 
       <SocialOrbit />
 
