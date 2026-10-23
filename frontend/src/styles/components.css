@@ -700,3 +700,9 @@ p { color: var(--ink-soft); }
     animation: none;
   }
 }
+
+/* Preserve AbaNtu Intelligence brand capitalization */
+.hero-cinematic .ai-brand,
+.hero-cinematic .ai-brand .ai-tag {
+  text-transform: none !important;
+}
