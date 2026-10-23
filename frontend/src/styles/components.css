@@ -247,3 +247,456 @@ p { color: var(--ink-soft); }
 .contact-feedback-error { color: #8f2825; background: #fff1ef; border: 1px solid #ecc6c1; }
 .contact-fallback { display: inline-block; margin-top: 12px; overflow-wrap: anywhere; text-decoration: underline; }
 .contact-honeypot, .contact-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+
+/* ABANTU — RESTORE ORIGINAL HERO TYPOGRAPHY */
+
+.hero-ai.hero-cinematic h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.hero-ai.hero-cinematic h1 em {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  background: linear-gradient(
+    100deg,
+    #49d7ff,
+    #8c67ff 70%,
+    #d5a83b
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* ABANTU — FULL-SCREEN HERO NAVIGATION */
+
+.hero-ai.hero-cinematic {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-cinematic .hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.hero-cinematic .hero-slides {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-cinematic .hero-slide {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1.6s ease, transform 8s ease;
+}
+
+.hero-cinematic .hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hide the original static image layer */
+.hero-cinematic .hero-visual {
+  display: none;
+}
+
+.hero-cinematic .hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 8, 18, 0.92),
+    rgba(3, 8, 18, 0.65) 52%,
+    rgba(3, 8, 18, 0.2)
+  );
+}
+
+.hero-cinematic .hero-grid {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-cinematic .hero-copy {
+  max-width: 850px;
+  padding: 130px 0 100px;
+}
+
+/* Top navigation */
+.hero-topbar {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px clamp(24px, 5vw, 90px);
+}
+
+.hero-brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-brand span {
+  font-weight: 400;
+}
+
+.hero-menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+  font: 600 0.8rem "Space Grotesk", sans-serif;
+  letter-spacing: 0.18em;
+}
+
+.hero-menu-icon {
+  width: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.hero-menu-icon i {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.hero-menu-icon.is-open i:first-child {
+  transform: translateY(4.5px) rotate(45deg);
+}
+
+.hero-menu-icon.is-open i:last-child {
+  transform: translateY(-4.5px) rotate(-45deg);
+}
+
+/* Full-screen navigation overlay */
+.hero-navigation {
+  position: absolute;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 10, 22, 0.98);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.hero-navigation.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.hero-navigation-inner {
+  width: min(760px, 86%);
+}
+
+.hero-navigation-label {
+  display: block;
+  margin-bottom: 30px;
+  color: #d5a83b;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+.hero-navigation-link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.hero-navigation-link:hover {
+  color: #d5a83b;
+}
+
+.hero-navigation-link small {
+  font-size: 0.7rem;
+  color: #d5a83b;
+}
+
+.hero-navigation-link span:last-child {
+  margin-left: auto;
+  font-size: 1.5rem;
+}
+
+.hero-navigation-contact {
+  display: inline-block;
+  margin-top: 30px;
+  color: #d5a83b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero-slide-controls {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  bottom: 35px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+}
+
+.hero-slide-dot {
+  width: 32px;
+  height: 3px;
+  padding: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.hero-slide-dot.is-active {
+  width: 55px;
+  background: #d5a83b;
+}
+
+/* Original AbaNtu headline typography */
+.hero-ai.hero-cinematic h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.hero-ai.hero-cinematic h1 em {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  background: linear-gradient(
+    100deg,
+    #49d7ff,
+    #8c67ff 70%,
+    #d5a83b
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .hero-topbar {
+    padding: 22px;
+  }
+
+  .hero-brand {
+    font-size: 1.05rem;
+  }
+
+  .hero-cinematic .hero-grid {
+    min-height: 100svh;
+  }
+
+  .hero-cinematic .hero-copy {
+    padding: 125px 0 90px;
+  }
+
+  .hero-navigation-link {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+  }
+
+  .hero-cinematic .hero-code {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cinematic .hero-slide,
+  .hero-navigation,
+  .hero-menu-icon i {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* AbaNtu Intelligence — cinematic slide enhancements */
+
+.hero-cinematic .hero-slide {
+  opacity: 0;
+  transform: scale(1.12) translate3d(1.5%, 0, 0);
+  filter: saturate(1.12) contrast(1.08);
+  transition:
+    opacity 1.8s ease-in-out,
+    transform 8s ease-in-out;
+  will-change: opacity, transform;
+}
+
+.hero-cinematic .hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1) translate3d(0, 0, 0);
+}
+
+.hero-cinematic .hero-slides {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-cinematic .hero-slide-controls {
+  z-index: 10;
+}
+
+.hero-cinematic .hero-slide-dot {
+  transition:
+    width 0.4s ease,
+    background-color 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cinematic .hero-slide {
+    transition: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .hero-cinematic .hero-slide.is-active {
+    transform: none;
+  }
+}
+
+/* =========================================
+   ABANTU INTELLIGENCE — ALIENIC 2095
+   ========================================= */
+
+.hero-cinematic {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Smooth interstellar scene transitions */
+.hero-cinematic .hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.10) translateY(1%);
+  filter: saturate(1.18) contrast(1.08);
+  transition:
+    opacity 1.7s ease-in-out,
+    transform 7s cubic-bezier(.2,.7,.2,1),
+    filter 1.7s ease;
+  will-change: opacity, transform;
+}
+
+.hero-cinematic .hero-slide.is-active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Atmospheric illumination */
+.hero-cinematic .hero-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse at 82% 35%,
+      rgba(67, 220, 255, .12),
+      transparent 48%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(2, 6, 20, .66),
+      rgba(2, 6, 20, .16) 70%
+    );
+}
+
+/* Gentle floating / bouncing Hero copy */
+.hero-cinematic .hero-copy {
+  animation: alienicFloat 6s ease-in-out infinite;
+}
+
+@keyframes alienicFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+/* Futuristic breathing glow on headline */
+.hero-cinematic h1 em {
+  animation: alienicGlow 4s ease-in-out infinite;
+}
+
+@keyframes alienicGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(55,210,255,.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(124,85,255,.5));
+  }
+}
+
+/* Mobile performance and accessibility */
+@media (max-width: 768px) {
+  .hero-cinematic .hero-slide {
+    background-position: center;
+  }
+
+  .hero-cinematic .hero-copy {
+    animation-duration: 8s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cinematic .hero-slide {
+    transition: opacity .2s ease;
+    transform: none;
+    will-change: auto;
+  }
+
+  .hero-cinematic .hero-copy,
+  .hero-cinematic h1 em {
+    animation: none;
+  }
+}
