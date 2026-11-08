@@ -29,16 +29,16 @@ const slides = [
   "/images/hero/abantu-2095-future-vision.webp",
 ];
 
-
-
-
-
 const navLinks = [
+  ["/intelligence", "Genesis 2095"],
   ["/about", "About"],
+  ["/services", "Services"],
   ["/sectors", "Sectors"],
   ["/projects", "Our Work"],
   ["/blog", "Insights"],
+  ["/contact", "Contact"],
 ];
+
 
 const particles = Array.from({ length: 34 }, (_, index) => ({
   id: index,
@@ -48,6 +48,32 @@ const particles = Array.from({ length: 34 }, (_, index) => ({
   delay: `${(index % 9) * -1.2}s`,
   duration: `${8 + (index % 7) * 2}s`,
 }));
+
+
+
+function WarriorHologram() {
+  return (
+    <div className="warrior-hologram">
+      <div className="warrior-energy-ring warrior-energy-ring--outer" />
+      <div className="warrior-energy-ring warrior-energy-ring--inner" />
+
+      <div className="warrior-hologram__figure">
+
+<img
+  src="/logo.png"
+  alt="AbaNtu Intelligence Warrior logo"
+  className="warrior-logo"
+/>
+
+      </div>
+
+      <div className="warrior-hologram__platform" />
+    </div>
+  );
+}
+
+
+
 
 export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -132,6 +158,8 @@ export default function Hero() {
 
       <div className="hero-overlay" />
 
+
+
       <div className="hero-topbar">
         <Link to="/" className="hero-brand">
           AbaNtu <span>Intelligence</span>
@@ -151,6 +179,11 @@ export default function Hero() {
           </span>
         </button>
       </div>
+
+
+
+
+
 
       <nav
         id="hero-navigation"
@@ -189,19 +222,13 @@ export default function Hero() {
 
       <div className="container hero-grid">
         <div className="hero-copy">
-          <div className="hero-eyebrow">
-            <span className="eyebrow">
-              <span className="ai-brand">
-                <span className="ai-tag">&lt;ai&gt;</span>
-                AbaNtu Intelligence
-                <span className="ai-tag">&lt;/ai&gt;</span>
-              </span>
-            </span>
 
-            <span className="eyebrow hero-location">
-              · South Africa ·
-            </span>
-          </div>
+<div className="hero-eyebrow">
+  <span className="eyebrow hero-location">
+    · South Africa ·
+  </span>
+</div>
+
 
           <h1>
             Before Artificial Intelligence, there is{" "}

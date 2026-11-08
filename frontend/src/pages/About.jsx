@@ -81,35 +81,35 @@ export default function About() {
       title="Multiple intelligences, one philosophy."
     />
     <p style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto 2.5rem auto", color: "var(--text-secondary)" }}>
-      AbaNtu is founder-led and deliberately collaborative. Our leadership brings together 
+      AbaNtu is founder-led and deliberately collaborative. Our leadership brings together
       business vision and AI depth—keeping people at the centre of everything we build.
     </p>
 
-    <div style={{ 
-      display: "grid", 
-      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", 
-      gap: "2.5rem", 
-      maxWidth: "900px", 
-      margin: "0 auto" 
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+      gap: "2.5rem",
+      maxWidth: "900px",
+      margin: "0 auto"
     }}>
-      
+
       {/* --- FOUNDER / CEO --- */}
-      <div style={{ 
-        background: "var(--bg-card)", 
-        padding: "2rem", 
+      <div style={{
+        background: "var(--bg-card)",
+        padding: "2rem",
         borderRadius: "12px",
         boxShadow: "0 4px 12px rgba(0,0,0,0.05)"
       }}>
-        <div style={{ 
-          width: "120px", 
-          height: "120px", 
-          borderRadius: "50%", 
-          background: "#ddd", 
-          overflow: "hidden", 
-          margin: "0 auto 1.25rem auto" 
+        <div style={{
+          width: "120px",
+          height: "120px",
+          borderRadius: "50%",
+          background: "#ddd",
+          overflow: "hidden",
+          margin: "0 auto 1.25rem auto"
         }}>
           <img
-            src="/TEPP.jpeg" 
+            src="/TEPP.jpeg"
             alt="Founder, Developer & Community Digital Strategist"
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
           />
@@ -119,96 +119,96 @@ export default function About() {
           Thabele Ka Plaatjie Phangalele
         </p>
         {/* --- EMAIL CHANNEL HANDLER (CEO) --- */}
-        <a 
+        <a
           href={`mailto:${site.email}`}
-          style={{ 
-            display: "block", 
-            textAlign: "center", 
-            fontSize: "0.85rem", 
-            color: "var(--primary)", 
-            textDecoration: "none", 
+          style={{
+            display: "block",
+            textAlign: "center",
+            fontSize: "0.85rem",
+            color: "var(--primary)",
+            textDecoration: "none",
             marginBottom: "0.75rem",
             fontWeight: "500"
           }}
         >
-        
+
         </a>
         <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>
-          A builder at heart. Ka Plaatjie started AbaNtu Intelligence to prove that African organisations 
-          don’t have to choose between affordability, dignity, and great technology. With a sharp focus 
-          on product-market fit and sustainable growth, they lead the company’s vision, culture, and 
-          fundraising—ensuring every solution we build solves a real, pressing problem before it tries 
+          A builder at heart. Ka Plaatjie started AbaNtu Intelligence to prove that African organisations
+          don’t have to choose between affordability, dignity, and great technology. With a sharp focus
+          on product-market fit and sustainable growth, they lead the company’s vision, culture, and
+          fundraising—ensuring every solution we build solves a real, pressing problem before it tries
           to impress anyone.
         </p>
         <div style={{ marginTop: "0.75rem", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
           <p><strong>Driven by</strong> — Resilience · Vision · Operational rigour · Team empowerment</p>
         </div>
       </div>
+{false && (
+  <div style={{
+    background: "var(--bg-card)",
+    padding: "2rem",
+    borderRadius: "12px",
+    boxShadow: "0 4px 12px rgba(0,0,0,0.05)"
+  }}>
+    <div style={{
+      width: "120px",
+      height: "120px",
+      borderRadius: "50%",
+      background: "#ddd",
+      overflow: "hidden",
+      margin: "0 auto 1.25rem auto"
+    }}>
+      <img
+        src="/caio.jfif" // Replace with actual path
+        alt="Co-Founder & Chief AI Officer"
+        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+      />
+    </div>
+    <h3 style={{ textAlign: "center", marginBottom: "0.25rem" }}>Co-Founder &amp; Chief AI Officer (CAIO)</h3>
+    <p style={{ textAlign: "center", fontSize: "1rem", fontWeight: "600", marginBottom: "0.25rem" }}>
+      Sibulelo Nicky Mahashana
+    </p>
+    {/* --- EMAIL CHANNEL HANDLER (CAIO) --- */}
+    <a
+      href={`mailto:${site.email}`}
+      style={{
+        display: "block",
+        textAlign: "center",
+        fontSize: "0.85rem",
+        color: "var(--primary)",
+        textDecoration: "none",
+        marginBottom: "0.75rem",
+        fontWeight: "500"
+      }}
+    >
 
-      {/* --- CHIEF AI OFFICER (CAIO) --- */}
-      <div style={{ 
-        background: "var(--bg-card)", 
-        padding: "2rem", 
-        borderRadius: "12px",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.05)"
-      }}>
-        <div style={{ 
-          width: "120px", 
-          height: "120px", 
-          borderRadius: "50%", 
-          background: "#ddd", 
-          overflow: "hidden", 
-          margin: "0 auto 1.25rem auto" 
-        }}>
-          <img
-            src="/caio.jfif" // Replace with actual path
-            alt="Co-Founder & Chief AI Officer"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-        </div>
-        <h3 style={{ textAlign: "center", marginBottom: "0.25rem" }}>Co-Founder &amp; Chief AI Officer (CAIO)</h3>
-        <p style={{ textAlign: "center", fontSize: "1rem", fontWeight: "600", marginBottom: "0.25rem" }}>
-          Sibulelo Nicky Mahashana
-        </p>
-        {/* --- EMAIL CHANNEL HANDLER (CAIO) --- */}
-        <a 
-          href={`mailto:${site.email}`}
-          style={{ 
-            display: "block", 
-            textAlign: "center", 
-            fontSize: "0.85rem", 
-            color: "var(--primary)", 
-            textDecoration: "none", 
-            marginBottom: "0.75rem",
-            fontWeight: "500"
-          }}
-        >
-      
-        </a>
-        <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>
-          The bridge between cutting-edge AI and genuine human impact. Nicky turns the 
-          "AbaNtu Intelligence" philosophy into operational reality—governing ethical AI deployment, 
-          mitigating bias, and ensuring every model we build amplifies human capability rather than 
-          replacing it. Their focus is on making AI practical, safe, and scalable for South Africa's 
-          unique education, civic, and SMME sectors.
-        </p>
-        <div style={{ marginTop: "0.75rem", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
-          <p><strong>Driven by</strong> — Ethical AI · Operationalisation · Data strategy · Cultural change</p>
-        </div>
-      </div>
+    </a>
+    <p style={{ fontSize: "0.95rem", lineHeight: "1.6" }}>
+      The bridge between cutting-edge AI and genuine human impact. Nicky turns the
+      "AbaNtu Intelligence" philosophy into operational reality—governing ethical AI deployment,
+      mitigating bias, and ensuring every model we build amplifies human capability rather than
+      replacing it. Their focus is on making AI practical, safe, and scalable for South Africa's
+      unique education, civic, and SMME sectors.
+    </p>
+    <div style={{ marginTop: "0.75rem", fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+      <p><strong>Driven by</strong> — Ethical AI · Operationalisation · Data strategy · Cultural change</p>
+    </div>
+  </div>
+)}
 
     </div>
 
     {/* Footer note */}
-    <p style={{ 
-      fontSize: "0.9rem", 
-      color: "var(--text-secondary)", 
-      textAlign: "center", 
-      maxWidth: "600px", 
-      margin: "2.5rem auto 0 auto" 
+    <p style={{
+      fontSize: "0.9rem",
+      color: "var(--text-secondary)",
+      textAlign: "center",
+      maxWidth: "600px",
+      margin: "2.5rem auto 0 auto"
     }}>
-      AbaNtu Intelligence is founder‑led and deliberately collaborative. We bring in the right technical, 
-      creative, and strategic capability according to the problem we’re solving—but our leadership anchors 
+      AbaNtu Intelligence is founder‑led and deliberately collaborative. We bring in the right technical,
+      creative, and strategic capability according to the problem we’re solving—but our leadership anchors
       everything in trust, transparency, and a deep respect for the people we serve.
     </p>
   </div>

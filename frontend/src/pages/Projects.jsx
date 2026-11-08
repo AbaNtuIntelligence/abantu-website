@@ -8,7 +8,7 @@ export default function Projects() {
   const loader = useCallback(() => getProjects(), []);
   const { data, loading } = useApiResource(loader, null);
   const apiItems = Array.isArray(data) ? data : data?.results;
-  const items = apiItems?.length ? apiItems : localProjects;
+  const items = localProjects; // Curated links: do not replace with potentially stale API records.
 
   return (
     <main className="page">

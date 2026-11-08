@@ -12,6 +12,8 @@ import Contact from "./pages/Contact";
 import Partnership from "./pages/Partnership";
 import SocialOrbit from "./components/SocialOrbit";
 import SeoManager from "./components/SeoManager";
+import Intelligence from "./pages/Intelligence";
+
 
 
 export default function App() {
@@ -23,6 +25,7 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/intelligence" element={<Intelligence />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/sectors" element={<Sectors />} />

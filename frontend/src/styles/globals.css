@@ -1043,3 +1043,44 @@ img { max-width: 100%; display: block; }
   gap: 0.5rem;
   flex-wrap: wrap;
 }
+
+/* Preserve AbaNtu Intelligence brand capitalization */
+
+.hero-cinematic .ai-brand,
+.hero-cinematic .ai-brand .ai-tag {
+  text-transform: none;
+}
+
+/* 2095 — Official AbaNtu Warrior logo sizing */
+
+.hero-cinematic .hero-warrior-stage {
+  width: 190px !important;
+  height: 190px !important;
+  max-width: 190px !important;
+}
+
+.hero-cinematic .warrior-hologram__figure {
+  width: 120px !important;
+  height: 120px !important;
+  max-width: 120px !important;
+}
+
+.hero-cinematic .warrior-logo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-cinematic .hero-warrior-stage {
+    width: 135px !important;
+    height: 135px !important;
+    max-width: 135px !important;
+  }
+
+  .hero-cinematic .warrior-hologram__figure {
+    width: 85px !important;
+    height: 85px !important;
+    max-width: 85px !important;
+  }
+}

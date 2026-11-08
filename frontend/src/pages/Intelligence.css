@@ -1,0 +1,335 @@
+
+/* ABANTU INTELLIGENCE — GENESIS 2095 */
+
+.genesis-page {
+  color: #f0f9ff;
+  background: #030a16;
+  overflow: hidden;
+}
+
+.genesis-stage {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  padding: 115px 24px 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 50% 52%, #123c59 0%, transparent 47%),
+    radial-gradient(ellipse at 80% 15%, #231b51 0%, transparent 42%),
+    #030a16;
+}
+
+.genesis-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(#32cfff12 1px, transparent 1px),
+    linear-gradient(90deg, #32cfff12 1px, transparent 1px);
+  background-size: 65px 65px;
+  mask-image: linear-gradient(transparent, black 30%, transparent);
+}
+
+.genesis-ambient {
+  position: absolute;
+  z-index: -1;
+  width: min(70vw, 650px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #08bfff18;
+  filter: blur(75px);
+  animation: genesisBreathe 7s ease-in-out infinite;
+}
+
+.genesis-heading {
+  max-width: 760px;
+  z-index: 2;
+}
+
+.genesis-kicker,
+.genesis-section-heading > span {
+  color: #5cddff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .28em;
+}
+
+.genesis-heading h1 {
+  margin: 20px 0 15px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+
+.genesis-heading h1 em {
+  font-style: normal;
+  background: linear-gradient(110deg, #5ee9ff, #a48cff, #ffc879);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.genesis-heading p {
+  max-width: 590px;
+  margin: 0 auto;
+  color: #b9ccdd;
+  line-height: 1.7;
+}
+
+.genesis-reactor {
+  position: relative;
+  width: clamp(220px, 33vw, 390px);
+  aspect-ratio: 1;
+  margin: 20px auto 0;
+  display: grid;
+  place-items: center;
+  filter: drop-shadow(0 0 30px #00bfff44);
+}
+
+.genesis-orbit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.genesis-orbit-one {
+  inset: 5%;
+  border: 2px dashed #43d9ff9c;
+  animation: genesisSpin 22s linear infinite;
+}
+
+.genesis-orbit-two {
+  inset: 14%;
+  border: 2px dotted #f4bd6c;
+  box-shadow: 0 0 20px #f4bd6c33;
+  animation: genesisSpin 13s linear infinite reverse;
+}
+
+.genesis-orbit-three {
+  inset: 28% -6%;
+  border: 1px solid #42dfff8c;
+  transform: rotate(-25deg);
+  animation: genesisTilt 8s ease-in-out infinite alternate;
+}
+
+.genesis-logo-shell {
+  width: 62%;
+  aspect-ratio: 1;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle, #0d304b88, transparent 73%);
+  animation: genesisLevitate 5s ease-in-out infinite;
+}
+
+.genesis-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px #35d9ff99);
+}
+
+.genesis-energy-base {
+  position: absolute;
+  bottom: 3%;
+  width: 58%;
+  height: 8%;
+  border: 2px solid #2ad9ffb3;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #24cfff99, inset 0 0 18px #24cfff44;
+  animation: genesisPulse 3s ease-in-out infinite;
+}
+
+.genesis-identity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 4px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.2rem, 3vw, 2.1rem);
+  font-weight: 700;
+  text-transform: none;
+}
+
+.genesis-code {
+  color: #3ee1ff;
+  text-shadow: 0 0 16px #21d6ff99;
+  animation: genesisPulse 3s ease-in-out infinite;
+}
+
+.genesis-origin {
+  margin: 8px 0 24px;
+  color: #bdd4e6;
+  letter-spacing: .3em;
+  font-size: 12px;
+}
+
+.genesis-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.genesis-action {
+  padding: 13px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.genesis-action:hover {
+  transform: translateY(-4px);
+}
+
+.genesis-action-primary {
+  color: #03111e;
+  background: linear-gradient(110deg, #62e6ff, #a8b4ff);
+  box-shadow: 0 0 25px #37cfff55;
+}
+
+.genesis-action-secondary {
+  color: #e8faff;
+  border: 1px solid #57cfff99;
+  background: #ffffff0b;
+}
+
+.genesis-capabilities {
+  padding: 90px 6vw 110px;
+  background: linear-gradient(#030a16, #071629);
+}
+
+.genesis-section-heading {
+  max-width: 800px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.genesis-section-heading h2 {
+  margin-top: 16px;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.genesis-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.genesis-capability {
+  position: relative;
+  min-height: 230px;
+  padding: 28px;
+  border: 1px solid #45cfff40;
+  border-radius: 18px;
+  background: linear-gradient(140deg, #12324c99, #091527bb);
+  color: inherit;
+  text-decoration: none;
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+
+.genesis-capability:hover {
+  transform: translateY(-8px);
+  border-color: #48dbff;
+  box-shadow: 0 15px 45px #05bfff1c;
+}
+
+.genesis-capability-number {
+  color: #51dfff;
+  font-size: 12px;
+  letter-spacing: .15em;
+}
+
+.genesis-capability h3 {
+  margin: 34px 0 12px;
+  font-size: 1.25rem;
+}
+
+.genesis-capability p {
+  color: #afc6d7;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.genesis-capability-arrow {
+  position: absolute;
+  right: 24px;
+  top: 23px;
+  color: #59dfff;
+  font-size: 22px;
+}
+
+@keyframes genesisSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes genesisTilt {
+  from { transform: rotate(-25deg); }
+  to { transform: rotate(25deg); }
+}
+
+@keyframes genesisLevitate {
+  0%, 100% { transform: translateY(6px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes genesisPulse {
+  0%, 100% { opacity: .55; }
+  50% { opacity: 1; }
+}
+
+@keyframes genesisBreathe {
+  0%, 100% { transform: scale(.85); opacity: .5; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
+
+@media (max-width: 850px) {
+  .genesis-capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .genesis-stage {
+    padding: 100px 18px 65px;
+  }
+
+  .genesis-reactor {
+    width: min(78vw, 300px);
+  }
+
+  .genesis-capability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .genesis-identity {
+    gap: 5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genesis-page *,
+  .genesis-page *::before,
+  .genesis-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

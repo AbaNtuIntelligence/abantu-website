@@ -18,7 +18,7 @@ export default function ProjectDetail() {
     (project) => project.slug === slug
   );
 
-  const project = data || localProject;
+  const project = localProject || data; // Keep curated deployment URLs authoritative.
 
   if (loading && !project) {
     return (
@@ -106,16 +106,20 @@ export default function ProjectDetail() {
             </section>
           )}
 
-          {project.liveUrl && project.liveUrl !== "#" && (
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="button button-primary"
-            >
-              View Live Website ↗
-            </a>
-          )}
+          {project.liveUrl && project.liveUrl !== "#" ? (
+  <a
+    href={project.liveUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="button button-primary"
+  >
+    Visit Live Project
+  </a>
+) : (
+  <Link to="/contact" className="button button-primary">
+    Discuss a Similar Solution
+  </Link>
+)}
         </div>
       </div>
     </main>

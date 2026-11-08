@@ -137,6 +137,31 @@ export const sectors = [
 
 export const projects = [
   {
+    title: "Rothvil Group Holdings",
+    slug: "rothvil-group-holdings",
+    sector: "Corporate Digital Presence",
+    tag: "Website",
+    client: "Rothvil Group Holdings",
+    summary: "A corporate digital experience showcasing engineering, infrastructure and business services.",
+    technology: ["Next.js", "React", "Render"],
+    image: "rothvil-group-holdings.jpeg",
+    liveUrl: "https://rothvil-group-holdings.onrender.com",
+    status: "needs-verification",
+  },
+  {
+    title: "Laser Engraving Lab",
+    slug: "laser-engraving-lab",
+    sector: "Digital Commerce",
+    tag: "Catalogue",
+    client: "Laser Engraving Lab",
+    summary: "An online catalogue and quotation experience for personalised engraving and gift products.",
+    technology: ["React", "Render"],
+    image: "/public/engraving-lap-gift-store.jpeg",
+    liveUrl: "https://www.engravinglapgiftstore.co.za/",
+    status: "needs-verification",
+  },
+
+  {
     title: "UmsebenziWethu Digital Job Market",
     slug: "umsebenziwethu",
     sector: "Employment Technology",
@@ -216,7 +241,8 @@ export const projects = [
     "Personal Development Framework",
   ],
   image: "/projects/self-mastery-index.png",
-  liveUrl: "https://abantu-intelligence-t5q6.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates how digital technology can transform a personal development framework into an engaging, structured and scalable self-mastery experience.",
 },
@@ -246,7 +272,8 @@ export const projects = [
     "Render",
   ],
   image: "/projects/property-marketplace.png",
-  liveUrl: "https://frontend-uimh.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates how fragmented property information can be transformed into a structured digital rental experience with potential to evolve into a broader property marketplace and management platform.",
 },
@@ -361,17 +388,18 @@ export const projects = [
     "Modern Web Development",
   ],
   image: "/projects/elliot-fullstack-system.png",
-  liveUrl: "https://elliot-phangalele-fullstack-system.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates AbaNtu Intelligence's ability to build personalised digital portfolios for people across professions and industries—not only developers—giving individuals a structured digital home for their identity, experience, work and aspirations.",
 },
 
   {
-  title: "Platno Trading Enterprise Digital Presence",
-  slug: "platno-trading-digital-presence",
+  title: "Educore Construction Group Digital Presence",
+  slug: "educore-construction-digital-presence",
   sector: "SMME Digitalisation",
   tag: "Business Website",
-  client: "Platno Trading Enterprise & Projects",
+  client: "Educore Construction Group",
   summary:
     "A professional digital presence for a South African construction and maintenance enterprise, bringing its services, company profile, project history and client engagement into one structured platform.",
   challenge:
@@ -390,8 +418,9 @@ export const projects = [
     "Cloud Deployment",
     "Render",
   ],
-  image: "/projects/platno-trading.png",
-  liveUrl: "https://platno-trading.onrender.com/",
+  image: "/projects/educore.png",
+  liveUrl: "https://educore-construction-group.co.za/",
+    status: "needs-verification",
   strategic:
     "Demonstrates how AbaNtu Intelligence can digitalise an established SMME by turning its existing services, company history, project references and capabilities into a professional digital business asset rather than simply creating a brochure website.",
 },
@@ -459,7 +488,8 @@ export const projects = [
     "Render",
   ],
   image: "/projects/nyanga-high.png",
-  liveUrl: "https://nyanga-high.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates how AbaNtu Intelligence can transform an institution's existing identity, knowledge, people, activities and heritage into digital infrastructure that can evolve from an online presence into a broader institutional ecosystem.",
 },
@@ -492,7 +522,8 @@ export const projects = [
     "Render",
   ],
   image: "/projects/prestige-build.png",
-  liveUrl: "https://constructors.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates AbaNtu Intelligence's ability to build enterprise-grade digital experiences that bring together marketing, corporate communications, project evidence, stakeholder information and business-development workflows in one digital ecosystem.",
 },
@@ -525,7 +556,8 @@ export const projects = [
     "Render",
   ],
   image: "/projects/timeline.png",
-  liveUrl: "https://timeline-i9c2.onrender.com/",
+  liveUrl: "https://school-timeline-1.onrender.com/",
+    status: "needs-verification",
   strategic:
     "Demonstrates AbaNtu Intelligence's approach to building new digital products from the ground up, experimenting with social and community infrastructure while the platform evolves toward its broader product vision.",
 },
@@ -555,7 +587,8 @@ export const projects = [
     "Render",
   ],
   image: "/projects/glow-spa.png",
-  liveUrl: "https://spa-2gy0.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates how AbaNtu Intelligence can transform a service-based SMME's offerings into a professional digital experience that supports discoverability, customer confidence and direct business conversion.",
 },
@@ -586,7 +619,8 @@ export const projects = [
     "Render",
   ],
   image: "/projects/personal-digital-resume.png",
-  liveUrl: "https://myprofile-3tzp.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates how AbaNtu Intelligence can turn a conventional CV into a living digital career profile, giving job seekers a professional online identity where their skills, qualifications, experience and supporting evidence can be discovered in one place.",
 },
@@ -619,7 +653,8 @@ export const projects = [
     "Render",
   ],
   image: "/projects/sitoza.png",
-  liveUrl: "https://sitoza.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates AbaNtu Intelligence's commitment to digital inclusion by showing how technology can bring rural and previously digitally underserved schools into the digital ecosystem, creating an infrastructure foundation that can evolve far beyond a conventional website.",
 },
@@ -719,7 +754,8 @@ export const projects = [
     "Render",
   ],
   image: "/projects/selahla-investments.png",
-  liveUrl: "https://selahla-investments.onrender.com/",
+  liveUrl: "#",
+    status: "needs-verification",
   strategic:
     "Demonstrates how AbaNtu Intelligence can digitalise the way an enterprise-development organisation communicates its services, structures complex business-support journeys and connects entrepreneurs with practical assistance.",
 },
