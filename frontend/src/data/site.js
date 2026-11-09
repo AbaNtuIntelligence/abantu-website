@@ -137,16 +137,32 @@ export const sectors = [
 
 export const projects = [
   {
-    title: "Rothvil Group Holdings",
-    slug: "rothvil-group-holdings",
-    sector: "Corporate Digital Presence",
-    tag: "Website",
-    client: "Rothvil Group Holdings",
-    summary: "A corporate digital experience showcasing engineering, infrastructure and business services.",
-    technology: ["Next.js", "React", "Render"],
-    image: "rothvil-group-holdings.jpeg",
-    liveUrl: "https://rothvil-group-holdings.onrender.com",
-    status: "needs-verification",
+    title: "Educore Digital Commerce",
+    slug: "educore-digital-commerce",
+    sector: "SMME Digitalisation",
+    tag: "Commerce",
+    client: "Educore",
+    summary:
+      "A structured digital catalogue and quotation ecosystem for a stationery, hygiene and PPE supplier.",
+    challenge:
+      "A large physical product range needed consistent digital structure, searchable information and a scalable catalogue workflow across hundreds of products.",
+    solution:
+      "Product data architecture, image processing, category mapping, catalogue interfaces, quote-basket workflows and deployment/SEO infrastructure.",
+    outcome:
+      "A scalable digital product catalogue designed to support institutional purchasing and future commerce workflows.",
+    technology: [
+      "React",
+      "Vite",
+      "JavaScript",
+      "CSV/Data Pipelines",
+      "Google Sheets",
+      "Axxess",
+      "Render",
+    ],
+    image: "/projects/educore.png",
+    liveUrl: "https://educorestationery-hygiene-ppe.co.za/",
+    strategic:
+      "Demonstrates how an SMME can turn a traditional product operation into structured digital commerce infrastructure.",
   },
   {
     title: "Laser Engraving Lab",
@@ -190,32 +206,16 @@ export const projects = [
   },
 
   {
-    title: "Educore Digital Commerce",
-    slug: "educore-digital-commerce",
-    sector: "SMME Digitalisation",
-    tag: "Commerce",
-    client: "Educore",
-    summary:
-      "A structured digital catalogue and quotation ecosystem for a stationery, hygiene and PPE supplier.",
-    challenge:
-      "A large physical product range needed consistent digital structure, searchable information and a scalable catalogue workflow across hundreds of products.",
-    solution:
-      "Product data architecture, image processing, category mapping, catalogue interfaces, quote-basket workflows and deployment/SEO infrastructure.",
-    outcome:
-      "A scalable digital product catalogue designed to support institutional purchasing and future commerce workflows.",
-    technology: [
-      "React",
-      "Vite",
-      "JavaScript",
-      "CSV/Data Pipelines",
-      "Google Sheets",
-      "Axxess",
-      "Render",
-    ],
-    image: "/projects/educore.png",
-    liveUrl: "https://educorestationery-hygiene-ppe.co.za/",
-    strategic:
-      "Demonstrates how an SMME can turn a traditional product operation into structured digital commerce infrastructure.",
+    title: "Rothvil Group Holdings",
+    slug: "rothvil-group-holdings",
+    sector: "Corporate Digital Presence",
+    tag: "Website",
+    client: "Rothvil Group Holdings",
+    summary: "A corporate digital experience showcasing engineering, infrastructure and business services.",
+    technology: ["Next.js", "React", "Render"],
+    image: "rothvil-group-holdings.jpeg",
+    liveUrl: "https://rothvil-group-holdings.onrender.com",
+    status: "needs-verification",
   },
 
  {
