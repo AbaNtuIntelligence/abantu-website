@@ -156,7 +156,7 @@ export const projects = [
     client: "Laser Engraving Lab",
     summary: "An online catalogue and quotation experience for personalised engraving and gift products.",
     technology: ["React", "Render"],
-    image: "/public/engraving-lap-gift-store.jpeg",
+    image: "/engraving-lap-gift-store.jpeg",
     liveUrl: "https://www.engravinglapgiftstore.co.za/",
     status: "needs-verification",
   },
