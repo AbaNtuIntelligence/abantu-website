@@ -217,6 +217,19 @@ export const projects = [
     liveUrl: "https://rothvil-group-holdings.onrender.com",
     status: "needs-verification",
   },
+  
+  {
+    title: "Educore Construction Group",
+    slug: "educore-construction-group",
+    sector: "Construction & Infrastructure",
+    tag: "Website",
+    client: "Educore Construction Group",
+    summary: "A professional corporate digital presence showcasing construction, maintenance, infrastructure services and business capabilities.",
+    technology: ["React", "JavaScript", "Render"],
+    image: "/projects/educore.png",
+    liveUrl: "https://educore-construction-group.co.za/",
+    status: "needs-verification",
+  },
 
  {
   title: "Self-Mastery Index™",
