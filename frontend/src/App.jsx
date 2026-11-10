@@ -10,7 +10,7 @@ import Blog from "./pages/Blog";
 import Article from "./pages/Article";
 import Contact from "./pages/Contact";
 import Partnership from "./pages/Partnership";
-import SocialOrbit from "./components/SocialOrbit";
+//import SocialOrbit from "./components/SocialOrbit";
 import SeoManager from "./components/SeoManager";
 import Intelligence from "./pages/Intelligence";
 
@@ -21,7 +21,7 @@ export default function App() {
     <SiteLayout>
       <SeoManager />
 
-      <SocialOrbit />
+       {/* <SocialOrbit /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
