@@ -174,7 +174,7 @@ export const projects = [
     technology: ["React", "Render"],
     image: "/engraving-lap-gift-store.jpeg",
     liveUrl: "https://www.engravinglapgiftstore.co.za/",
-    status: "needs-verification",
+    status: "live",
   },
 
   {
@@ -204,8 +204,73 @@ export const projects = [
     strategic:
       "A foundation for a broader employment and opportunity ecosystem.",
   },
-
   {
+  title: "Educore Construction Group Digital Presence",
+  slug: "educore-construction-digital-presence",
+  sector: "SMME Digitalisation",
+  tag: "Business Website",
+  client: "Educore Construction Group",
+  summary:
+    "A professional digital presence for a South African construction and maintenance enterprise, bringing its services, company profile, project history and client engagement into one structured platform.",
+  challenge:
+    "A multi-service construction business needed a credible digital presence capable of communicating its capabilities, company background, completed projects and community-focused objectives while making it easier for prospective clients and partners to engage.",
+  solution:
+    "A responsive business website combining company information, service categories, project references, detailed project case studies, testimonials, company-profile access, contact workflows and quotation calls-to-action.",
+  outcome:
+    "A comprehensive digital presence that allows a traditionally operated construction enterprise to present its capabilities professionally, document its project experience and create a clearer pathway for new business enquiries and partnerships.",
+  technology: [
+    "React",
+    "JavaScript",
+    "Responsive UI/UX",
+    "Project Portfolio Architecture",
+    "Digital Company Profile",
+    "Contact & Enquiry Workflows",
+    "Cloud Deployment",
+    "Render",
+  ],
+  image: "/projects/educore-construction.jpeg",
+  liveUrl: "https://educore-construction-group.co.za/",
+  status: "live",
+  strategic:
+    "Demonstrates how AbaNtu Intelligence can digitalise an established SMME by turning its existing services, company history, project references and capabilities into a professional digital business asset rather than simply creating a brochure website.",
+ },
+
+{
+  title: "Selahla Investments Digital Enterprise Platform",
+  slug: "selahla-investments-digital-enterprise-platform",
+  sector: "SMME & Enterprise Development",
+  tag: "Business Platform",
+  client: "Selahla Investments & Services Academy",
+  summary:
+    "A digital enterprise-development platform helping entrepreneurs, start-ups and SMMEs understand, access and navigate the support required to move from business idea to sustainable enterprise.",
+  challenge:
+    "Entrepreneurs often encounter business registration, compliance, funding, business planning, tendering, market access and skills development as disconnected processes. Without a clear digital pathway, important support and information can be difficult to discover and understand.",
+  solution:
+    "We designed and developed a structured digital platform that brings Selahla's consulting, training and enterprise-development services into one accessible experience, while presenting a clear entrepreneurial journey from business idea and formalisation through compliance, planning, funding readiness, market readiness, launch and growth.",
+  outcome:
+    "A professional digital gateway through which entrepreneurs and SMMEs can understand available services, navigate the enterprise-development journey and connect with Selahla for consulting, training, compliance, funding-readiness and business-growth support.",
+  technology: [
+    "Responsive UI/UX",
+    "Mobile-First Design",
+    "Service Architecture",
+    "Business Information Architecture",
+    "Enterprise Development Workflows",
+    "Interactive Journey Design",
+    "Lead Generation",
+    "Contact Integration",
+    "Cloud Deployment",
+    "Render",
+  ],
+  image: "/projects/selahla-investments.png",
+  liveUrl: "#",
+  status: "live",
+  strategic:
+    "Demonstrates how AbaNtu Intelligence can digitalise the way an enterprise-development organisation communicates its services, structures complex business-support journeys and connects entrepreneurs with practical assistance.",
+},
+
+
+
+ {
     title: "Rothvil Group Holdings",
     slug: "rothvil-group-holdings",
     sector: "Corporate Digital Presence",
@@ -215,20 +280,7 @@ export const projects = [
     technology: ["Next.js", "React", "Render"],
     image: "rothvil-group-holdings.jpeg",
     liveUrl: "https://rothvil-group-holdings.onrender.com",
-    status: "needs-verification",
-  },
-  
-  {
-    title: "Educore Construction Group",
-    slug: "educore-construction-group",
-    sector: "Construction & Infrastructure",
-    tag: "Website",
-    client: "Educore Construction Group",
-    summary: "A professional corporate digital presence showcasing construction, maintenance, infrastructure services and business capabilities.",
-    technology: ["React", "JavaScript", "Render"],
-    image: "/projects/educore.png",
-    liveUrl: "https://educore-construction-group.co.za/",
-    status: "needs-verification",
+    
   },
 
  {
@@ -255,7 +307,7 @@ export const projects = [
   ],
   image: "/projects/self-mastery-index.png",
   liveUrl: "#",
-    status: "needs-verification",
+  status: "live",
   strategic:
     "Demonstrates how digital technology can transform a personal development framework into an engaging, structured and scalable self-mastery experience.",
 },
@@ -285,7 +337,7 @@ export const projects = [
     "Render",
   ],
   image: "/projects/property-marketplace.png",
-  liveUrl: "#",
+  liveUrl: "https://property-frontend-8cza.onrender.com/",
     status: "needs-verification",
   strategic:
     "Demonstrates how fragmented property information can be transformed into a structured digital rental experience with potential to evolve into a broader property marketplace and management platform.",
@@ -407,36 +459,7 @@ export const projects = [
     "Demonstrates AbaNtu Intelligence's ability to build personalised digital portfolios for people across professions and industries—not only developers—giving individuals a structured digital home for their identity, experience, work and aspirations.",
 },
 
-  {
-  title: "Educore Construction Group Digital Presence",
-  slug: "educore-construction-digital-presence",
-  sector: "SMME Digitalisation",
-  tag: "Business Website",
-  client: "Educore Construction Group",
-  summary:
-    "A professional digital presence for a South African construction and maintenance enterprise, bringing its services, company profile, project history and client engagement into one structured platform.",
-  challenge:
-    "A multi-service construction business needed a credible digital presence capable of communicating its capabilities, company background, completed projects and community-focused objectives while making it easier for prospective clients and partners to engage.",
-  solution:
-    "A responsive business website combining company information, service categories, project references, detailed project case studies, testimonials, company-profile access, contact workflows and quotation calls-to-action.",
-  outcome:
-    "A comprehensive digital presence that allows a traditionally operated construction enterprise to present its capabilities professionally, document its project experience and create a clearer pathway for new business enquiries and partnerships.",
-  technology: [
-    "React",
-    "JavaScript",
-    "Responsive UI/UX",
-    "Project Portfolio Architecture",
-    "Digital Company Profile",
-    "Contact & Enquiry Workflows",
-    "Cloud Deployment",
-    "Render",
-  ],
-  image: "/projects/educore.png",
-  liveUrl: "https://educore-construction-group.co.za/",
-    status: "needs-verification",
-  strategic:
-    "Demonstrates how AbaNtu Intelligence can digitalise an established SMME by turning its existing services, company history, project references and capabilities into a professional digital business asset rather than simply creating a brochure website.",
-},
+  
   {
   title: "Educore Digital Product List",
   slug: "educore-digital-product-list",
@@ -570,7 +593,7 @@ export const projects = [
   ],
   image: "/projects/timeline.png",
   liveUrl: "https://school-timeline-1.onrender.com/",
-    status: "needs-verification",
+    status: "live",
   strategic:
     "Demonstrates AbaNtu Intelligence's approach to building new digital products from the ground up, experimenting with social and community infrastructure while the platform evolves toward its broader product vision.",
 },
@@ -740,38 +763,6 @@ export const projects = [
   strategic:
     "Demonstrates AbaNtu Intelligence's approach to digital inclusion by giving a Cape Flats high school a structured digital communication layer through which its people, programmes, achievements, opportunities and resources can become more visible and accessible.",
 },
-  {
-  title: "Selahla Investments Digital Enterprise Platform",
-  slug: "selahla-investments-digital-enterprise-platform",
-  sector: "SMME & Enterprise Development",
-  tag: "Business Platform",
-  client: "Selahla Investments & Services Academy",
-  summary:
-    "A digital enterprise-development platform helping entrepreneurs, start-ups and SMMEs understand, access and navigate the support required to move from business idea to sustainable enterprise.",
-  challenge:
-    "Entrepreneurs often encounter business registration, compliance, funding, business planning, tendering, market access and skills development as disconnected processes. Without a clear digital pathway, important support and information can be difficult to discover and understand.",
-  solution:
-    "We designed and developed a structured digital platform that brings Selahla's consulting, training and enterprise-development services into one accessible experience, while presenting a clear entrepreneurial journey from business idea and formalisation through compliance, planning, funding readiness, market readiness, launch and growth.",
-  outcome:
-    "A professional digital gateway through which entrepreneurs and SMMEs can understand available services, navigate the enterprise-development journey and connect with Selahla for consulting, training, compliance, funding-readiness and business-growth support.",
-  technology: [
-    "Responsive UI/UX",
-    "Mobile-First Design",
-    "Service Architecture",
-    "Business Information Architecture",
-    "Enterprise Development Workflows",
-    "Interactive Journey Design",
-    "Lead Generation",
-    "Contact Integration",
-    "Cloud Deployment",
-    "Render",
-  ],
-  image: "/projects/selahla-investments.png",
-  liveUrl: "#",
-    status: "needs-verification",
-  strategic:
-    "Demonstrates how AbaNtu Intelligence can digitalise the way an enterprise-development organisation communicates its services, structures complex business-support journeys and connects entrepreneurs with practical assistance.",
-},
-
+  
   
 ];

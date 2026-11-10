@@ -9,12 +9,14 @@ export default function ProjectCard({ project }) {
           alt={`${project.title} digital interface preview`}
           loading="lazy"
         />
-        <span className="project-card-image-label">
+                        <span className="project-card-image-label">
           {project.status === "coming-soon"
-            ? "In development"
-            : project.status === "needs-verification"
-              ? "Live link pending"
-              : "Digital system"}
+            ? "In Development"
+            : project.status === "live"
+              ? "Live Preview"
+              : project.status === "needs-verification"
+                ? "Preview Under Review"
+                : "Digital System"}
         </span>
       </div>
 
